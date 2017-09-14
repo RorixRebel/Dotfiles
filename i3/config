@@ -177,19 +177,19 @@ bindsym $mod1+t		exec gnome-terminal -e tmux
 
 #Wallpapers and startup apps
 exec --no-startup-id mopidy &
-exec --no-startup-id ~/.config/i3/wallpaper.sh &
-exec_always compton -b --config ~/.config/i3/comptonrc
+exec --no-startup-id ~/.dotfiles/polybar/wallpaper.sh &
+exec_always compton -b --config ~/.dotfiles/compton/comptonrc
 exec --no-startup-id ckb
-exec --no-startup-id spotify
 exec --no-startup-id google-chrome
 exec --no-startup-id gnome-terminal
 exec --no-startup-id /opt/franz/Franz
 exec --no-startup-id slack
+exec --no-startup-id spotify
 
 #Assign apps to workspaces
 assign [class="Google-chrome"] 	$workspace2
 assign [class="Atom"] 		$workspace3
-assign [class="spotify"] 	$workspace4
+assign [class="Spotify"] 	$workspace4
 assign [class="Thunar"] 	$workspace3
 assign [class="vlc"] 		$workspace5
 assign [class="Gnome-terminal"] $workspace1
@@ -205,7 +205,7 @@ assign [class="discord"]	$workspace6
 #GAPS
 hide_edge_borders 		both
 for_window [class="^.*"] border pixel 0
-for_window [class="Thunar"] floating enable, move absolute center
+for_window [class="Thunar"] floating enable 
 for_window [class="Pavucontrol"] floating enable, move absolute center
 for_window [window_role="pop-up"] floating enable,move absolute center
 for_window [class="VirtualBox"] floating enable
@@ -213,7 +213,7 @@ for_window [class="vlc"] floating enable
 for_window [class="Join"] floating enable, move absolute center
 
 gaps inner 8
-gaps outer 0
+gaps outer 3
 
 #82 = + in keypad
 #89 = - in keypad

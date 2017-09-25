@@ -217,11 +217,11 @@ gaps outer 3
 
 #82 = + in keypad
 #89 = - in keypad
-bindcode $mod+82		gaps outer current plus 5
-bindcode $mod+Shift+82		gaps outer current minus 5
+bindcode $mod+82		gaps outer current plus 9
+bindcode $mod+Shift+82		gaps outer current minus 9
 
-bindcode $mod+86		gaps inner current plus 5
-bindcode $mod+Shift+86		gaps inner current minus 5
+bindcode $mod+86		gaps inner current plus 9
+bindcode $mod+Shift+86		gaps inner current minus 9
 
 
 #Log out Reboot and PowerOFF

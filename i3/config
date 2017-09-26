@@ -179,6 +179,7 @@ bindsym $mod1+t		exec gnome-terminal -e tmux
 exec --no-startup-id mopidy &
 exec --no-startup-id ~/.dotfiles/polybar/wallpaper.sh &
 exec_always compton -b --config ~/.dotfiles/compton/comptonrc
+exec --no-startup-id dunst -conf ~/.config/dunst/dunstrc
 exec --no-startup-id ckb
 exec --no-startup-id google-chrome
 exec --no-startup-id gnome-terminal

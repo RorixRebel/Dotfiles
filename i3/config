@@ -59,11 +59,12 @@ set $workspace1 "1:"
 set $workspace2 "2:"
 set $workspace3 "3:"
 set $workspace4 "4:"
-set $workspace5 "5:"
+set $workspace5 "5:"
 set $workspace6 "6:"
 set $workspace7 "7:"
-set $workspace0 "10:"
 set $workspace8 "8:"
+set $workspace9 "9:"
+set $workspace0 "10:"
 
 #Colors
 set_from_resource $fg i3wm.color7 #ffffff
@@ -170,7 +171,7 @@ bindsym $mod+space exec rofi -show combi -modi combi -font "System San Francisco
 #Custom app shortcuts
 bindsym $mod1+g 	exec google-chrome
 bindsym $mod1+f 	exec thunar
-bindsym $mod1+r      	exec gnome-terminal -e ranger
+bindsym $mod1+r    	exec gnome-terminal -e ranger
 bindsym $mod1+s		exec gnome-terminal -e ncmpcpp 
 bindsym $mod1+v		exec virtualbox
 bindsym $mod1+t		exec gnome-terminal -e tmux 
@@ -181,7 +182,7 @@ exec --no-startup-id ~/.dotfiles/polybar/wallpaper.sh &
 exec_always compton -b --config ~/.dotfiles/compton/comptonrc
 exec --no-startup-id dunst -conf ~/.config/dunst/dunstrc
 exec --no-startup-id ckb
-exec --no-startup-id google-chrome
+exec --no-startup-id google-chrome 
 exec --no-startup-id gnome-terminal
 exec --no-startup-id /opt/franz/Franz
 exec --no-startup-id slack
@@ -215,6 +216,14 @@ for_window [class="Join"] floating enable, move absolute center
 
 gaps inner 8
 gaps outer 3
+
+# Set Monitor variables
+set $m1 HDMI-0
+set $m2 DVI-I-0
+workspace $workspace4 output $m2
+workspace $workspace2 output $m1
+workspace $workspace5 output $m2
+workspace $workspace6 output $m2
 
 #82 = + in keypad
 #89 = - in keypad

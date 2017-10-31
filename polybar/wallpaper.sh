@@ -8,5 +8,5 @@ while true
 do 
     wal -q -t -i ~/Pictures -o ~/.config/i3/wal-set
     ~/.config/polybar/launch.sh
-    sleep 15m
+    sleep 30m
 done

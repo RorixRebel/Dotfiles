@@ -52,6 +52,7 @@ set incsearch
 set showmatch
 set hlsearch
 set nocp
+set spell spelllang=en_us
 
 let g:ansible_options = {'ignore_blank_lines': 0}
 let g:ansible_options = {'documentation_mapping': '<C-K>'}

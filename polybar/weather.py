@@ -1,9 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
-import urllib.request, json
+import urllib.request
+import os
+
 
 city = "San Antonio"
-api_key = "bfd92bb103b04d4f7bc58df281a98909"
+api_key = os.environ.get('WEATHER_API')
 units = "Metric"
 unit_key = "C"
 
@@ -12,4 +14,4 @@ weather = eval(str(urllib.request.urlopen("http://api.openweathermap.org/data/2.
 info = weather["weather"][0]["description"].capitalize()
 temp = int(float(weather["main"]["temp"]))
 
-print("%s, %i °%s" % (info, temp, unit_key))
+print("{}, {} °{}".format(info, temp, unit_key))

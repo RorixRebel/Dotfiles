@@ -182,17 +182,18 @@ exec --no-startup-id ~/.dotfiles/polybar/wallpaper.sh &
 exec_always compton -b --config ~/.dotfiles/compton/comptonrc
 exec --no-startup-id dunst -conf ~/.config/dunst/dunstrc
 exec --no-startup-id ckb
-exec --no-startup-id google-chrome 
+exec --no-startup-id google-chrome
 exec --no-startup-id gnome-terminal
 exec --no-startup-id ~/Apps/Rambox/rambox
 exec --no-startup-id slack
 exec --no-startup-id spotify
 
 #Assign apps to workspaces
-#assign [class="Google-chrome"] 	$workspace2
-assign [class="Atom"] 		$workspace3
+# assign [class="Google-chrome"] 	$workspace2
+# assign [class="Atom"] 		$workspace3
 assign [class="Spotify"] 	$workspace4
 # assign [class="Thunar"] 	$workspace3
+assign [class="spotify"] 	$workspace4
 assign [class="vlc"] 		$workspace5
 # assign [class="Gnome-terminal"] $workspace1
 assign [class="jetbrains-pycharm-ce"] $workspace8
@@ -222,8 +223,9 @@ gaps outer 3
 set $m1 HDMI-0
 set $m2 DVI-I-0
 workspace $workspace1 output $m1
-workspace $workspace4 output $m2
 workspace $workspace2 output $m1
+workspace $workspace3 output $m1
+workspace $workspace4 output $m2
 workspace $workspace5 output $m2
 workspace $workspace6 output $m2
 

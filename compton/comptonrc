@@ -29,7 +29,11 @@ menu-opacity = 0.8;
 frame-opacity = 0.7;
 inactive-opacity-override = false;
 alpha-step = 0.06;
+<<<<<<< HEAD
 # inactive-dim = 0.2;
+=======
+#inactive-dim = 0.2;
+>>>>>>> 2704fadd02b3ad535aa8f09140e469b53de04de4
 # inactive-dim-fixed = true;
 # blur-background = true;
 # blur-background-frame = true;

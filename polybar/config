@@ -69,7 +69,7 @@ type = custom/script
 interval = 10
 format = <label>
 format-prefix-foreground = ${colors.foreground}
-exec =python3 ~/.dotfiles/polybar/weather.py
+exec = python3 ~/.dotfiles/polybar/weather.py
 format-underline = ${colors.foreground-alt}
 
 [module/redshift]

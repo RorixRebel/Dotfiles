@@ -1,75 +1,169 @@
-set nocompatible
-filetype off
+set nocompatible              " required
+filetype off                  " required
 set hidden
 set showtabline=0
 
+" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'dylanaraps/wal'
-Plugin 'Lokaltog/powerline'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'scrooloose/nerdtree' 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'chriskempson/base16-vim'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'honza/vim-snippets'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'klen/python-mode'
-Plugin 'scrooloose/syntastic'
+
+" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+"-------------------=== Code/Project navigation ===-------------
+Plugin 'scrooloose/nerdtree'                " Project and file navigation
+Plugin 'Xuyuanp/nerdtree-git-plugin'        " NerdTree git functionality
+Plugin 'majutsushi/tagbar'                  " Class/module browser
+Plugin 'vim-ctrlspace/vim-ctrlspace'
+Plugin 'mileszs/ack.vim'
+Plugin 'vim-airline/vim-airline'            " Lean & mean status/tabline for vim
+Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
+Plugin 'Lokaltog/powerline'                 " Powerline fonts plugin
+Plugin 'fisadev/FixedTaskList.vim'          " Pending tasks list
+Plugin 'rosenfeld/conque-term'              " Consoles as buffers
+Plugin 'yuttie/comfortable-motion.vim'      " Smooth scrolling
+Plugin 'MattesGroeger/vim-bookmarks'        " Bookmarks
+Plugin 'thaerkh/vim-indentguides'           " Visual representation of indents
+
+"-------------------=== Other ===-------------------------------
+Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
+Plugin 'flazz/vim-colorschemes'             " Colorschemes
+Plugin 'vimwiki/vimwiki'                    " Personal Wiki
+Plugin 'jreybert/vimagit'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'kien/rainbow_parentheses.vim'       " Rainbow Parentheses
+Plugin 'chriskempson/base16-vim'            " Base 16 colors
+Plugin 'ryanoasis/vim-devicons'             " Dev Icons
+
+"-------------------=== Snippets support ===--------------------
+Plugin 'garbas/vim-snipmate'                " Snippets manager
+Plugin 'MarcWeber/vim-addon-mw-utils'       " dependencies #1
+Plugin 'tomtom/tlib_vim'                    " dependencies #2
+Plugin 'honza/vim-snippets'                 " snippets repo
+
+"-------------------=== Languages support ===-------------------
+Plugin 'tpope/vim-commentary'               " Comment stuff out
+Plugin 'scrooloose/nerdcommenter'           " Easy code documentation
+Plugin 'mitsuhiko/vim-sparkup'              " Sparkup(XML/jinja/htlm-django/etc.) support
+Plugin 'Rykka/riv.vim'                      " ReStructuredText plugin
+Plugin 'Valloric/YouCompleteMe'             " Autocomplete plugin
+Plugin 'w0rp/ale'
+
+"-------------------=== Python  ===-----------------------------
+Plugin 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
+Plugin 'scrooloose/syntastic'               " Syntax checking plugin for Vim
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'mitsuhiko/vim-python-combined'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'jmcantrell/vim-virtualenv'
-call vundle#end()
 
-execute pathogen#infect()
-call pathogen#infect()
-call pathogen#helptags()
-
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 filetype on
 filetype plugin on
 filetype plugin indent on
-syntax on
 
-
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-set splitbelow
-set splitright
-
-
-let g:ansible_options = {'ignore_blank_lines': 0}
-let g:ansible_options = {'documentation_mapping': '<C-K>'}
-
+"=====================================================
+"" General settings
+"=====================================================
+if filereadable(expand("~/.vimrc_background"))
+  source ~/.vimrc_background
+endif
 set encoding=utf-8
-let base16colorspace=256
-set t_Co=256                                " 256 colors
-set guifont=mononoki\ Nerd\ Font\ 18
-colorscheme base16-default-dark             " set vim colorscheme
-let g:airline_theme='base16_spacemacs'             " set airline theme
+"let base16colorspace=256
+"set t_Co=256                                " 256 colors
+"set guifont=mononoki\ Nerd\ Font\ 18
+"colorscheme base16-default-dark             " set vim colorscheme
+"let g:airline_theme='base16_spacemacs'             " set airline theme
 syntax enable                               " enable syntax highlighting
-set ruler
-set clipboard=unnamed
-set number
-set smartindent
-set autoindent
-set shiftwidth=4
-set tabstop=4
-nnoremap / /\v
-vnoremap / /\v
-set ignorecase
-set smartcase
-set gdefault
-set incsearch
-set showmatch
-set hlsearch
-set nocp
-set spell spelllang=en_us
 
+
+set shell=/bin/zsh
+set number                                  " show line numbers
+set ruler
+set ttyfast                                 " terminal acceleration
+
+set tabstop=4                               " 4 whitespaces for tabs visual presentation
+set shiftwidth=4                            " shift lines by 4 spaces
+set smarttab                                " set tabs for a shifttabs logic
+set expandtab                               " expand tabs into spaces
+set autoindent                              " indent when moving to the next line while writing code
+
+set cursorline                              " shows line under the cursor's line
+set showmatch                               " shows matching part of bracket pairs (), [], {}
+
+set enc=utf-8	                            " utf-8 by default
+
+set nobackup 	                            " no backup files
+set nowritebackup                           " only in case you don't want a backup file while editing
+set noswapfile 	                            " no swap files
+
+set backspace=indent,eol,start              " backspace removes all (indents, EOLs, start) What is start?
+
+set scrolloff=20                            " let 10 lines before/after cursor during scroll
+
+set clipboard=unnamed                       " use system clipboard
+
+set exrc                                    " enable usage of additional .vimrc files from working directory
+set secure                                  " prohibit .vimrc files to execute shell, create files, etc...
+
+"=====================================================
+"" Tabs / Buffers settings
+"=====================================================
+tab sball
+set switchbuf=useopen
+set laststatus=2
+nmap <F9> :bprev<CR>
+nmap <F10> :bnext<CR>
+nmap <silent> <leader>q :SyntasticCheck # <CR> :bp <BAR> bd #<CR>
+
+"=====================================================
+"" Workspace Settings 
+"=====================================================
+nnoremap <Fc> :ToggleWorkspace<CR>
+let g:workspace_autosave_always = 1
+
+"=====================================================
+"" Relative Numbering 
+"=====================================================
+nnoremap <F4> :set relativenumber!<CR>
+
+"=====================================================
+"" Search settings
+"=====================================================
+set incsearch	                            " incremental search
+set hlsearch	                            " highlight search results
+
+"=====================================================
+"" Comfortable Motion Settings
+"=====================================================
+let g:comfortable_motion_scroll_down_key = "j"
+let g:comfortable_motion_scroll_up_key = "k"
+let g:comfortable_motion_no_default_key_mappings = 1
+let g:comfortable_motion_impulse_multiplier = 25  " Feel free to increase/decrease this value.
+nnoremap <silent> <C-d> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 2)<CR>
+nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -2)<CR>
+nnoremap <silent> <C-f> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 4)<CR>
+nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -4)<CR>
+
+"=====================================================
+"" AirLine settings
+"=====================================================
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter='unique_tail'
+let g:airline_powerline_fonts=1
+
+"=====================================================
+"" TagBar settings
+"=====================================================
+let g:tagbar_autofocus=0
+let g:tagbar_width=42
+autocmd BufEnter *.py :call tagbar#autoopen(0)
+autocmd BufWinLeave *.py :TagbarClose
 
 "=====================================================
 "" NERDTree settings
@@ -78,6 +172,30 @@ let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']     " Ignore files in NE
 let NERDTreeWinSize=40
 autocmd VimEnter * if !argc() | NERDTree | endif  " Load NERDTree only if vim is run without arguments
 nmap " :NERDTreeToggle<CR>
+
+"=====================================================
+"" NERDComment Settings 
+"=====================================================
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
 
 
 "=====================================================
@@ -131,6 +249,28 @@ let g:DevIconsEnableFolderPatternMatching = 1
 let g:DevIconsEnableFolderExtensionPatternMatching = 0
 
 
+"=====================================================
+"" SnipMate settings
+"=====================================================
+let g:snippets_dir='~/.vim/vim-snippets/snippets'
+
+"=====================================================
+"" Riv.vim settings
+"=====================================================
+let g:riv_disable_folding=1
+
+"=====================================================
+"" Rainbow Parentheses Autoload 
+"=====================================================
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+"=====================================================
+"" Indent Guides Settings 
+"=====================================================
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 "=====================================================
 "" Python settings
 "=====================================================
@@ -241,20 +381,6 @@ let g:syntastic_check_on_wq = 0
 
 imap <F5> <Esc>:w<CR>:!clear;python %<CR>
 
-no <down> <Nop>
-no <left> <Nop>
-no <right> <Nop>
-no <up> <Nop>
-
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
-ino <up> <Nop>
-
-vno <down> <Nop>
-vno <left> <Nop>
-vno <right> <Nop>
-vno <up> <Nop>
 
 python3 << EOF
 import vim

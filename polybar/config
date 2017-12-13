@@ -48,8 +48,8 @@ font-3 = Source Code Pro:pixelsize=12;1
 font-2 = siji:pixelsize=15;1
 
 modules-left = i3 xwindow
-modules-center = date weather mpd 
-modules-right = redshift volume cpu memory filesystem temperature powermenu
+modules-center = date mpd weather
+modules-right = volume cpu memory filesystem temperature powermenu
 
 ;tray-position = right
 ;tray-padding = 5
@@ -69,17 +69,8 @@ type = custom/script
 interval = 10
 format = <label>
 format-prefix-foreground = ${colors.foreground}
-exec = python3 ~/.dotfiles/polybar/weather.py
 format-underline = ${colors.foreground-alt}
-
-[module/redshift]
-type = custom/script
-interval = 5
-exec = ~/.config/polybar/redshift.sh
-format=<label>
-format-prefix-underline=${colors.foreground}
-label=%output%
-label-underline=${colors.foreground-alt}
+exec = ~/.dotfiles/polybar/weather.py
 
 [module/xwindow]
 type = internal/xwindow

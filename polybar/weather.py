@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import requests
-import json
 import os
 
 # Setup Data
@@ -13,9 +12,9 @@ URL = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units={}".fo
 
 # Request
 weather = requests.get(URL)
-weather_json = json.loads(weather.text)
+weather_json = weather.json()
 
 # Weather Data
 info = weather_json['weather'][0]['description'].capitalize()
-temp = weather_json['main']['temp']
+temp = int(float(weather_json['main']['temp']))
 print("{}, {} °{}".format(info, temp, unit_key))

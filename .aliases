@@ -5,7 +5,7 @@ alias vim="nvim"
 alias vimi3="vim ~/dotfiles/i3/config"
 alias vimpoly="vim ~/dotfiles/polybar/config"
 alias wali="wal -q -t -i ~/Pictures"
-alias poly="polybar example &"
+alias poly="~/dotfiles/polybar/launch.sh"
 
 #Navigation
 alias dot="cd ~/dotfiles"

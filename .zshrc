@@ -64,8 +64,15 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configurat
+# User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# load .Xresources and .Xdefaults
+# I have merged the contents of .Xdefaults into .Xresources
+if [ -f ~/.Xresources ];
+then
+    xrdb -load ~/.Xresources
+fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

@@ -38,9 +38,10 @@ fi
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
 
+rsync --ignore-existing ~/dotfiles/i3/config ~/.config/i3/config
+rsync --ignore-existing ~/dotfiles/.zshrc ~/.zshrc
+rsync --ignore-existing ~/dotfiles/.xinitrc ~/.xinitrc
 
 numlockx &
-compton -b --config ~/dotfiles/compton/comptonrc
-~/dotfiles/polybar/launch.sh
 wal -R
-exec i3
+#exec i3 -c $HOME/dotfiles/i3/config

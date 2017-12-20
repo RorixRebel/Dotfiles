@@ -14,6 +14,7 @@ URL = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units={}".fo
 weather = requests.get(URL)
 weather_json = weather.json()
 
+
 # Weather Data
 info = weather_json['weather'][0]['description'].capitalize()
 temp = int(float(weather_json['main']['temp']))

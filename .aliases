@@ -18,7 +18,9 @@ alias venv="virtualenv --python=python3 venv"
 alias vact="source .venv/bin/activate"
 alias vdec="deactivate"
 
+# Random
 alias update="sudo pacman -Sy"
+alias ll="ls -lrta"
 
 
 # APIs

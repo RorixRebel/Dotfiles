@@ -2,7 +2,7 @@
 
 # Customization
 alias vim="nvim"
-alias vimi3="vim ~/.config/i3/config"
+alias vimi3="vim ~/dotfiles/i3/config"
 alias vimpoly="vim ~/dotfiles/polybar/config"
 alias wali="wal -q -t -i ~/Pictures"
 alias poly="polybar example &"

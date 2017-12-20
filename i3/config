@@ -164,31 +164,28 @@ bindsym $mod+space exec rofi -show run -modi combi -config ~/.config/rofi/rofi.c
 #Custom app shortcuts
 bindsym $mod1+g 	exec google-chrome-stable
 bindsym $mod1+f 	exec thunar
-bindsym $mod1+r    	exec gnome-terminal -e ranger
-bindsym $mod1+s		exec gnome-terminal -e ncmpcpp 
-bindsym $mod1+t		exec gnome-terminal -e tmux 
+bindsym $mod1+r    	exec termite -e ranger
+bindsym $mod1+s		exec termite -e ncmpcpp 
+bindsym $mod1+t		exec termite -e tmux 
 
 #Wallpapers and startup apps
-#exec --no-startup-id mopidy &
+exec --no-startup-id ~/dotfiles/polybar/launch.sh &
+exec --no-startup-id mopidy &
 exec --no-startup-id wal -q -t -i ~/Pictures/qSYiVB0.jpg
-#exec_always compton -b --config ~/.dotfiles/compton/comptonrc &
-#exec --no-startup-id ~/dotfiles/polybar/launch.sh &
+exec_always compton -b --config ~/dotfiles/compton/comptonrc &
+exec --no-startup-id ~/dotfiles/polybar/launch.sh &
 exec --no-startup-id dunst -conf ~/dotfiles/dunst/dunstrc
-# exec --no-startup-id ckb
+exec --no-startup-id ckb
 exec --no-startup-id google-chrome-stable
-exec --no-startup-id gnome-terminal
+exec --no-startup-id termite 
 #exec --no-startup-id ~/Apps/Rambox/rambox
 #exec --no-startup-id slack
 
 #Assign apps to workspaces
-assign [class="Spotify"] 	$workspace4
-assign [class="spotify"] 	$workspace4
+assign [class="^Spotify"] 	$workspace4
 assign [class="vlc"] 		$workspace5
-assign [class="Slack"] 		$workspace6
-assign [class="Rambox"] 		$workspace6
+assign [class="Rambox"] 	$workspace6
 assign [class="ckb"]		$workspace6
-assign [class="VirtualBox"]	$workspace7
-assign [class="discord"]	$workspace6
 
 #GAPS
 hide_edge_borders 		both
@@ -199,9 +196,16 @@ for_window [window_role="pop-up"] floating enable,move absolute center
 for_window [class="VirtualBox"] floating enable
 for_window [class="vlc"] floating enable
 for_window [class="Join"] floating enable, move absolute center
+for_window [window_role="task_dialog|bubble|page-info|Preferences|pop-up"] floating enable
+for_window [window_role="Open Files"] floating enable sticky
+for_window [window_role="File Operation Progress"] floating enable sticky
+for_window [window_role="Save As"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
 
-gaps inner 8
-gaps outer 3
+
+gaps inner 10
+gaps outer 10
 
 # Set Monitor variables
 set $m1 HDMI-0

@@ -51,7 +51,7 @@ font-2 = siji:pixelsize=15;1
 
 modules-left = i3 xwindow
 modules-center = date mpd weather
-modules-right = volume cpu memory filesystem temperature powermenu
+modules-right = updates volume cpu memory filesystem temperature powermenu
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -63,6 +63,15 @@ format =  <label>
 format-foreground = ${colors.middle}
 format-underline = ${colors.underlines}
 exec = ~/dotfiles/polybar/weather.py
+
+[module/updates]
+type = custom/script
+interval = 30
+format =  <label>
+format-foreground = ${colors.right}
+format-underline = ${colors.underlines}
+exec = pacman -Qu | wc -l
+
 
 [module/xwindow]
 type = internal/xwindow

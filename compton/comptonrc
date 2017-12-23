@@ -44,13 +44,14 @@ blur-background-exclude = [
 	"class_g ='google-chrome'"
 ];
 
-opacity-rule = [ "80:class_g = 'URxvt'",
+opacity-rule = [ "90:class_g = 'URxvt'",
 		 "0:class_g = 'google-chrome'",
-		 "99:class_g = 'vlc'"];
+		 "99:class_g = 'vlc'",
+		 "85:class_g = 'Termite'"];
 
 # Fading
 fading = true;
-# fade-delta = 30;
+#fade-delta = 30;
 fade-in-step = 0.03;
 fade-out-step = 0.03;
 # no-fading-openclose = true;

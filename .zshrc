@@ -39,7 +39,7 @@ ZSH_THEME="robbyrussell"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -69,10 +69,10 @@ source $ZSH/oh-my-zsh.sh
 
 # load .Xresources and .Xdefaults
 # I have merged the contents of .Xdefaults into .Xresources
-if [ -f ~/.Xresources ];
-then
-    xrdb -load ~/.Xresources
-fi
+#if [ -f ~/.Xresources ];
+#then
+#    xrdb -load ~/.Xresources
+#fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -106,3 +106,4 @@ fi
 (wal -r &)
 
 source ~/dotfiles/.aliases
+export EDITOR="/usb/bin/zsh"

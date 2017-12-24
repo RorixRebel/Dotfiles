@@ -106,4 +106,4 @@ source $ZSH/oh-my-zsh.sh
 (wal -r &)
 
 source ~/dotfiles/.aliases
-export EDITOR="/usb/bin/zsh"
+export EDITOR="nvim"

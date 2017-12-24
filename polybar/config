@@ -132,13 +132,12 @@ label-urgent-padding = 3
 
 [module/mpd]
 type = internal/mpd 
-format-online = <label-song> 
+format-online = <label-song>
 label-song =  %artist% - %title%
 format-online-foreground=${colors.middle}
 format-online-underline=${colors.underlines}
 host = 127.0.0.1
 port = 6600
-
 
 [module/cpu]
 type=internal/cpu
@@ -168,14 +167,13 @@ label-foreground = ${colors.middle}
 [module/volume]
 type = internal/volume
 interval = 1
-format-volume = <label-volume> 
+format-volume = <label-volume>
 label-volume =  %percentage%
 label-volume-foreground = ${colors.right}
 label-volume-underline = ${colors.underlines}
 format-muted-prefix = " MUTED"
 format-muted-foreground = ${colors.foreground}
-;label-muted = sound muted
-
+label-muted = sound muted
 
 [module/temperature]
 type = internal/temperature

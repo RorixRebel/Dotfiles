@@ -216,6 +216,7 @@ workspace $workspace4 output $m2
 workspace $workspace5 output $m2
 workspace $workspace6 output $m2
 
+# GAPS
 #82 = + in keypad
 #89 = - in keypad
 bindcode $mod+82		gaps outer current plus 9
@@ -224,6 +225,9 @@ bindcode $mod+Shift+82		gaps outer current minus 9
 bindcode $mod+86		gaps inner current plus 9
 bindcode $mod+Shift+86		gaps inner current minus 9
 
+# Scratchpad
+bindcode $mod+33        move scratchpad
+bindcode $mod+Shift+33  scratchpad show, move absolute center
 
 #Log out Reboot and PowerOFF
 mode "Exit (L)ogout, (R)eboot, (P)oweroff, (S)Suspend" {
@@ -239,6 +243,3 @@ mode "Exit (L)ogout, (R)eboot, (P)oweroff, (S)Suspend" {
 
 bindsym $mod+Shift+q mode "Exit (L)ogout, (R)eboot, (P)oweroff, (S)Suspend"
 
-# Scratchpad
-bindsym $mod+` move scratchpad
-bindsym $mod+Shift+` scratchpad show

@@ -7,7 +7,7 @@ set $mod1 mod1
 font pango: Source Code Pro 11
 
 # start a terminal
-bindsym $mod+Return 	exec urxvt 
+bindsym $mod+Return 	exec gnome-terminal 
 
 # kill focused window
 bindsym $mod+q	       	kill
@@ -167,8 +167,8 @@ bindsym $mod+space exec rofi -show run -modi combi -config ~/dotfiles/rofi/rofi.
 bindsym $mod1+g 	exec google-chrome-stable 
 bindsym $mod1+f		exec firefox
 bindsym $mod1+e 	exec thunar
-bindsym $mod1+r    	exec urxvt -e ranger
-bindsym $mod1+s		exec urxvt -e ncmpcpp 
+bindsym $mod1+r    	exec gnome-terminal -e ranger
+bindsym $mod1+s		exec gnome-terminal -e ncmpcpp 
 
 #Wallpapers and startup apps
 exec --no-startup-id wal -q -t -i ~/Pictures/qSYiVB0.jpg
@@ -177,7 +177,7 @@ exec_always compton -b --config ~/dotfiles/compton/comptonrc &
 exec --no-startup-id dunst -conf ~/dotfiles/dunst/dunstrc
 exec --no-startup-id ckb -b
 exec --no-startup-id firefox
-exec --no-startup-id urxvt 
+exec --no-startup-id gnome-terminal 
 exec --no-startup-id rambox
 exec --no-startup-id slack
 exec --no-startup-id $HOME/dotfiles/polybar/launch.sh

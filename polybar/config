@@ -18,7 +18,7 @@ left = ${xrdb:color5}
 alert = #F00
 
 [bar/main]
-monitor = eDP-1 
+monitor = HDMI-0
 width = 98%
 height = 30
 ;offset-x = 0
@@ -50,7 +50,7 @@ font-3 = Source Code Pro:pixelsize=11;1
 font-2 = siji:pixelsize=11;1
 
 modules-left = i3 xwindow
-modules-center = date mpd weather
+modules-center = work date weather mpd
 modules-right = updates battery backlight volume cpu memory filesystem temperature powermenu
 
 scroll-up = i3wm-wsnext
@@ -80,6 +80,13 @@ label-charging-foreground = ${colors.right}
 label-charging-underline = ${colors.underlines}
 label-full =  %percentage%
 
+[module/work]
+type = custom/script
+interval = 0
+format =  <label>
+format-foreground = ${colors.middle}
+format-underline = ${colors.underlines}
+exec = ~/dotfiles/polybar/workdone.py
 
 [module/weather]
 type = custom/script

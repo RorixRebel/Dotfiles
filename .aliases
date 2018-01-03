@@ -5,16 +5,24 @@ alias vim="nvim"
 alias vimi3="vim ~/.config/i3/config"
 alias vimpoly="vim ~/dotfiles/polybar/config"
 alias wali="wal -q -t -i ~/Pictures -o ~/dotfiles/polybar/launch.sh"
+alias poly="~/dotfiles/polybar/launch.sh"
+
+# Drives
+alias mdrive="sudo mount /dev/sda1 /mnt"
+alias udrive="sudo umount /dev/sda1/"
+
 
 #Navigation
 alias dot="cd ~/dotfiles"
 alias gfonts="cd /usr/share/fonts"
-alias projects="cd ~/Projects"
-alias blog="cd ~/Projects/rorixrebel.github.io"
+alias projects="cd /mnt/Projects"
+alias blog="cd /mnt/Projects/rorixrebel.github.io"
+alias scripts="cd /mnt/Scripts"
+alias data="cd /mnt/"
 
 #Python
 alias venv="virtualenv --python=python3 venv"
-alias vact="source .venv/bin/activate"
+alias vact="source venv/bin/activate"
 alias vdec="deactivate"
 
 # Random

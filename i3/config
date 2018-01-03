@@ -168,7 +168,7 @@ bindsym $mod1+g 	exec google-chrome-stable
 bindsym $mod1+f		exec firefox
 bindsym $mod1+e 	exec thunar
 bindsym $mod1+r    	exec gnome-terminal -e ranger
-bindsym $mod1+s		exec gnome-terminal -e ncmpcpp 
+bindsym $mod1+s		exec gnome-terminal -e ncmpcpp
 
 #Wallpapers and startup apps
 exec --no-startup-id wal -q -t -i ~/Pictures/qSYiVB0.jpg
@@ -176,15 +176,15 @@ exec --no-startup-id mopidy &
 exec_always compton -b --config ~/dotfiles/compton/comptonrc &
 exec --no-startup-id dunst -conf ~/dotfiles/dunst/dunstrc
 exec --no-startup-id ckb -b
-exec --no-startup-id firefox
-exec --no-startup-id gnome-terminal 
+exec --no-startup-id firefox; move container to workspace2
+exec --no-startup-id gnome-terminal; move container to workspace1
 exec --no-startup-id rambox
 exec --no-startup-id slack
 exec --no-startup-id $HOME/dotfiles/polybar/launch.sh
 exec --no-startup-id numlockx &
 
 #Assign apps to workspaces
-assign [class="^Spotify"] 	$workspace4
+assign [class="Spotify"] 	$workspace4
 assign [class="vlc"] 		$workspace5
 assign [class="Rambox"] 	$workspace6
 assign [class="ckb"]		$workspace6

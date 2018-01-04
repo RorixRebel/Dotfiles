@@ -2,7 +2,6 @@
 
 import requests
 import os
-import time
 
 # Setup Data
 city = "San Antonio"
@@ -11,7 +10,6 @@ units = "Metric"
 unit_key = "C"
 URL = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units={}".format(city, api_key, units)
 
-time.sleep(5)
 
 # Request
 weather = requests.get(URL)

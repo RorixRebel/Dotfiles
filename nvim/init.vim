@@ -7,9 +7,7 @@ set showtabline=0
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
 
-" alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
@@ -23,6 +21,7 @@ Plugin 'thaerkh/vim-indentguides'           " Visual representation of indents
 "-------------------=== Other ===-------------------------------
 Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
 Plugin 'chriskempson/base16-vim'            " Base 16 colors
+Plugin 'reedes/vim-wordy'                   " Wordy
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -35,7 +34,7 @@ filetype plugin indent on
 "=====================================================
 set encoding=utf-8
 set mouse=a
-let g:airline_theme='molokai'             " set airline theme
+let g:airline_theme='molokai'               " set airline theme
 syntax enable                               " enable syntax highlighting
 
 set shell=/bin/zsh
@@ -58,8 +57,6 @@ set nobackup 	                            " no backup files
 set nowritebackup                           " only in case you don't want a backup file while editing
 set noswapfile 	                            " no swap files
 
-set backspace=indent,eol,start              " backspace removes all (indents, EOLs, start) What is start?
-
 set scrolloff=20                            " let 10 lines before/after cursor during scroll
 
 set clipboard=unnamed                       " use system clipboard
@@ -75,13 +72,6 @@ set switchbuf=useopen
 set laststatus=2
 nmap <F9> :bprev<CR>
 nmap <F10> :bnext<CR>
-nmap <silent> <leader>q :SyntasticCheck # <CR> :bp <BAR> bd #<CR>
-
-"=====================================================
-"" Workspace Settings 
-"=====================================================
-nnoremap <Fc> :ToggleWorkspace<CR>
-let g:workspace_autosave_always = 1
 
 "=====================================================
 "" Relative Numbering 
@@ -95,7 +85,7 @@ set incsearch	                            " incremental search
 set hlsearch	                            " highlight search results
 
 "=====================================================
-"" AirLine settings
+"" AirLine settinginoremap <silent> <F8> <C-o>:NextWordy<cr>s
 "=====================================================
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
@@ -104,3 +94,15 @@ let g:airline#extensions#tabline#formatter='unique_tail'
 "" Indent Guides Settings 
 "=====================================================
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+
+"=====================================================
+" Wordy
+" ====================================================
+
+noremap <silent> <F8> :<C-u>NextWordy<cr>
+inoremap <silent> <F8> <C-o>:NextWordy<cr>
+
+"=====================================================
+" Spelling
+"=====================================================
+noremap <silent> <F5> :set spell! <CR>

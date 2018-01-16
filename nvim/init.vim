@@ -17,11 +17,14 @@ Plugin 'vim-airline/vim-airline'            " Lean & mean status/tabline for vim
 Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
 Plugin 'MattesGroeger/vim-bookmarks'        " Bookmarks
 Plugin 'thaerkh/vim-indentguides'           " Visual representation of indents
+Plugin 'scrooloose/nerdtree'                " NerdTREE
 
 "-------------------=== Other ===-------------------------------
 Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
 Plugin 'chriskempson/base16-vim'            " Base 16 colors
 Plugin 'reedes/vim-wordy'                   " Wordy
+Plugin 'dag/vim-fish'                       " Fish Shell
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -35,9 +38,10 @@ filetype plugin indent on
 set encoding=utf-8
 set mouse=a
 let g:airline_theme='molokai'               " set airline theme
+let g:airline#extensions#tabline#enabled = 1
 syntax enable                               " enable syntax highlighting
 
-set shell=/bin/zsh
+set shell=/bin/bash
 set number                                  " show line numbers
 set ruler
 set ttyfast                                 " terminal acceleration
@@ -85,7 +89,7 @@ set incsearch	                            " incremental search
 set hlsearch	                            " highlight search results
 
 "=====================================================
-"" AirLine settinginoremap <silent> <F8> <C-o>:NextWordy<cr>s
+"" AirLine setting
 "=====================================================
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
@@ -96,11 +100,16 @@ let g:airline#extensions#tabline#formatter='unique_tail'
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 "=====================================================
+" NERDTree
+"=====================================================
+map <F2> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+"=====================================================
 " Wordy
 " ====================================================
-
-noremap <silent> <F8> :<C-u>NextWordy<cr>
-inoremap <silent> <F8> <C-o>:NextWordy<cr>
+noremap <silent> <F8> <C-u>:NextWordy<CR>
 
 "=====================================================
 " Spelling

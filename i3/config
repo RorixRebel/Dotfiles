@@ -176,8 +176,6 @@ exec --no-startup-id mopidy &
 exec_always compton -b --config ~/dotfiles/compton/comptonrc &
 exec --no-startup-id dunst -conf ~/dotfiles/dunst/dunstrc
 exec --no-startup-id ckb -b
-exec --no-startup-id firefox; move container to workspace2
-exec --no-startup-id gnome-terminal; move container to workspace1
 exec --no-startup-id rambox
 exec --no-startup-id slack
 exec --no-startup-id $HOME/dotfiles/polybar/launch.sh

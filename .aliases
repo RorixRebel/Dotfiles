@@ -29,6 +29,10 @@ alias vdec="deactivate"
 alias update="sudo pacman -Sy"
 alias ll="ls -lrta"
 
+# Git
+alias gst="git status"
+alias gaa="git add ."
+alias gcm="git commit -m"
 
 # APIs
 export WEATHER_API="bfd92bb103b04d4f7bc58df281a98909"

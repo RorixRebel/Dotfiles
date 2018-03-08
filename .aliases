@@ -28,6 +28,7 @@ alias vdec="deactivate"
 # Random
 alias update="sudo pacman -Sy"
 alias ll="ls -lrta"
+alias blog="cd /mnt/Projects/rorixrebel.github.io"
 
 # Git
 alias gst="git status"

@@ -161,7 +161,7 @@ bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 #ROFI
-bindsym $mod+space exec rofi -show run -modi combi -config ~/dotfiles/rofi/rofi.config
+bindsym $mod+space exec rofi -show drun -modi combi -config ~/dotfiles/rofi/rofi.config
 
 #Custom app shortcuts
 bindsym $mod1+g 	exec google-chrome-stable 

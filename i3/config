@@ -163,6 +163,9 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 #ROFI
 bindsym $mod+space exec rofi -show drun -modi combi -config ~/dotfiles/rofi/rofi.config
 
+# QUTEBROWSER
+bindsym $mod1+q exec qutebrowser
+
 #Custom app shortcuts
 bindsym $mod1+g 	exec google-chrome-stable 
 bindsym $mod1+f		exec firefox

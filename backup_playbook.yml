@@ -2,55 +2,73 @@
 - hosts: localhost
   become: yes
   become_method: sudo
-  gather_facts: yes
   tasks:
-    - name: Install applications
-      pacman:
-          name: '{{item}}'
-          state: present
-      loop: 
-            - 'rofi'
-            - 'ansible'
-            - 'cmatrix'
-            - 'compton'
-            - 'fish'
-            - 'dunst'
-            - 'docker'
-            - 'i3-gaps'
-            - 'jq'
-            - 'mongodb'
-            - 'mopidy'
-            - 'ncmpcpp'
-            - 'neovim'
-            - 'nodejs'
-            - 'npm'
-            - 'numlockx'
-            - 'playerctl'
-            - 'ranger'
-            - 'scrot'
-            - 'vagrant'
-            - 'virtualbox'
-            - 'vlc'
-            - 'lxappearance'
-            - 'fish'
-            - 'cava'
-            - 'feh'
-            - 'firefox'
-            - 'ghostwriter'
-            - 'google-chrome'
-            - 'mongodb'
-            - 'neofetch'
-            - 'postman-bin'
-            - 'rambox'
-            - 'rsync'
-            - 'spotify'
-            - 'thunar'
-            - 'tmux'
-            - 'thunar'
-            - 'vagrant'
-            - 'virtualbox'
-            - 'visual-studio-code-bin'
+      - name: Install applications from pacaur
+        pacman:
+            name: '{{ item }}'
+            state: present
+            with_items:
+                - 'rofi'
+                - 'ansible'
+                - 'cmatrix'
+                - 'compton'
+                - 'fish'
+                - 'dunst'
+                - 'docker'
+                - 'i3-gaps'
+                - 'jq'
+                - 'mongodb'
+                - 'mopidy'
+                - 'ncmpcpp'
+                - 'neovim'
+                - 'nodejs'
+                - 'npm'
+                - 'numlockx'
+                - 'playerctl'
+                - 'ranger'
+                - 'scrot'
+                - 'vagrant'
+                - 'virtualbox'
+                - 'vlc'
+                - 'lxappearance'
+                - 'fish'
+                - 'cava'
+                - 'feh'
+                - 'firefox'
+                - 'ghostwriter'
+                - 'google-chrome'
+                - 'mongodb'
+                - 'neofetch'
+                - 'postman-bin'
+                - 'rambox'
+                - 'rsync'
+                - 'spotify'
+                - 'thunar'
+                - 'tmux'
+                - 'thunar'
+                - 'vagrant'
+                - 'virtualbox'
+                - 'visual-studio-code-bin'
+                - 'qutebrowser'
+                - 'mpv'
+                - 'neomutt'
+                - 'xclip'
+            tags:
+                - 'arch'
 
-
-
-        
+      - name: Install pip packages
+        pip:
+            name: '{{item}}'
+            state: present
+            with_items:
+                - 'twython'
+                - 'wagtail'
+                - 'django'
+                - 'flask'
+                - 'thefuck'
+                - 'pytest'
+                - 'pyqt5'
+                - 'requests'
+                - 'rtv'
+            tags:
+                - 'pip'

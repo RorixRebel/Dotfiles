@@ -4,7 +4,7 @@ import requests
 import os
 
 # Setup Data
-city = "San Antonio"
+city = "BloomingtonMn"
 api_key = os.environ.get('WEATHER_API')
 units = "Metric"
 unit_key = "C"

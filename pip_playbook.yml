@@ -1,0 +1,21 @@
+--- # Pip packages
+- hosts: localhost
+  become: true
+  become_method: sudo
+  tasks:
+  - name: Install pip packages
+    pip:
+        name: '{{item}}'
+        state: present
+    loop:
+        - 'twython'
+        - 'wagtail'
+        - 'django'
+        - 'flask'
+        - 'thefuck'
+        - 'pytest'
+        - 'pyqt5'
+        - 'requests'
+        - 'rtv'
+    tags:
+        - 'pip'

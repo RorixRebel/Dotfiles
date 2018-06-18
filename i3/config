@@ -7,7 +7,7 @@ set $mod1 mod1
 font pango: Source Code Pro 11
 
 # start a terminal
-bindsym $mod+Return 	exec gnome-terminal 
+bindsym $mod+Return 	exec termite
 
 # kill focused window
 bindsym $mod+q	       	kill
@@ -52,14 +52,14 @@ bindsym $mod1+Shift+space focus mode_toggle
 #Variables
 set $workspace1 "1:"
 set $workspace2 "2:"
-set $workspace3 "3:"
+set $workspace3 "3:"
 set $workspace4 "4:"
 set $workspace5 "5:"
-set $workspace6 "6:"
+set $workspace6 "6:"
 set $workspace7 "7:"
 set $workspace8 "8:"
 set $workspace9 "9:"
-set $workspace0 "10:"
+set $workspace0 "10:"
 
 #Colors
 set_from_resource $fg i3wm.color7 #ffffff
@@ -170,11 +170,11 @@ bindsym $mod1+q exec qutebrowser
 bindsym $mod1+g 	exec google-chrome-stable 
 bindsym $mod1+f		exec firefox
 bindsym $mod1+e 	exec thunar
-bindsym $mod1+r    	exec gnome-terminal -e ranger
-bindsym $mod1+s		exec gnome-terminal -e ncmpcpp
+bindsym $mod1+r    	exec termite -e ranger
+bindsym $mod1+s		exec termite -e ncmpcpp
 
 #Wallpapers and startup apps
-exec --no-startup-id wal -q -t -i ~/Pictures/qSYiVB0.jpg
+exec --no-startup-id wal -q -t -i ~/Pictures/darksouls.jpg
 exec --no-startup-id mopidy &
 exec_always compton -b --config ~/dotfiles/compton/comptonrc &
 exec --no-startup-id dunst -conf ~/dotfiles/dunst/dunstrc
@@ -245,5 +245,5 @@ mode "Exit (L)ogout, (R)eboot, (P)oweroff, (S)Suspend" {
 bindsym $mod+Shift+q mode "Exit (L)ogout, (R)eboot, (P)oweroff, (S)Suspend"
 
 # Scratchpad
-bindsym $mod+` move scratchpad
-bindsym $mod+Shift+` scratchpad show
+bindsym $mod1+` move scratchpad
+bindsym $mod1+Shift+` scratchpad show

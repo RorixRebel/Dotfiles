@@ -13,5 +13,10 @@ echo "userChrome in sync"
 rsync ~/.config/nvim/init.vim ~/dotfiles/nvim/init.vim
 echo "Nvim in sync"
 
+# termite
+rsync ~/.config/termite/config ~/dotfiles/termite/config
+echo "Termite in Sync"
 
+# ranger
+rsync ~/.config/ranger/rc.conf ~/dotfiles/ranger/rc.conf
 

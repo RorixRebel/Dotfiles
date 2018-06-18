@@ -48,9 +48,10 @@ font-0 = FontAwesome:pixelsize=11;1
 font-1 = Dina:style=Bold:pixelsize=11;1
 font-3 = Source Code Pro:pixelsize=11;1
 font-2 = siji:pixelsize=11;1
+font-4 = MaterialDesignIcons:pixelsize=11;1
 
 modules-left = i3 xwindow
-modules-center = work date weather mpd
+modules-center = date weather mpd
 modules-right = updates battery backlight volume cpu memory filesystem temperature powermenu
 
 scroll-up = i3wm-wsnext

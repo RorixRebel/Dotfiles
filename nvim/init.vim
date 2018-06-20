@@ -2,6 +2,7 @@ set nocompatible              " required
 filetype off                  " required
 set hidden
 set showtabline=0
+set clipboard+=unnamedplus
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim

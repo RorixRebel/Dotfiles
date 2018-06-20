@@ -4,7 +4,7 @@ set $mod1 mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Source Code Pro 11
+font pango: Source Code Pro 12
 
 # start a terminal
 bindsym $mod+Return 	exec termite
@@ -50,16 +50,16 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod1+Shift+space focus mode_toggle
 
 #Variables
-set $workspace1 "1:"
-set $workspace2 "2:"
-set $workspace3 "3:"
-set $workspace4 "4:"
-set $workspace5 "5:"
-set $workspace6 "6:"
-set $workspace7 "7:"
-set $workspace8 "8:"
-set $workspace9 "9:"
-set $workspace0 "10:"
+set $1 "1:"
+set $2 "2:"
+set $3 "3:"
+set $4 "4:"
+set $5 "5:"
+set $6 "6:"
+set $7 "7:"
+set $8 "8:"
+set $9 "9:"
+set $0 "10:"
 
 #Colors
 set_from_resource $fg i3wm.color7 #ffffff
@@ -68,26 +68,27 @@ set_from_resource $eg i3wm.color4 #ffffff
 set_from_resource $ig i3wm.color0 #ffffff
 
 # switch to workspace
-bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace $workspace4
-bindsym $mod+5 workspace $workspace5
-bindsym $mod+6 workspace $workspace6
-bindsym $mod+7 workspace $workspace7
-bindsym $mod+0 workspace $workspace0
-bindsym $mod+8 workspace $workspace8
+bindsym $mod+1 workspace $1
+bindsym $mod+2 workspace $2
+bindsym $mod+3 workspace $3
+bindsym $mod+4 workspace $4
+bindsym $mod+5 workspace $5
+bindsym $mod+6 workspace $6
+bindsym $mod+7 workspace $7
+bindsym $mod+8 workspace $8
+bindsym $mod+9 workspace $9
+bindsym $mod+0 workspace $0
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $workspace1
-bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace $workspace3
-bindsym $mod+Shift+4 move container to workspace $workspace4
-bindsym $mod+Shift+5 move container to workspace $workspace5
-bindsym $mod+Shift+6 move container to workspace $workspace6
-bindsym $mod+Shift+7 move container to workspace $workspace7
-bindsym $mod+Shift+0 move container to workspace $workspace0
-bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+1 move container to workspace $1
+bindsym $mod+Shift+2 move container to workspace $2
+bindsym $mod+Shift+3 move container to workspace $3
+bindsym $mod+Shift+4 move container to workspace $4
+bindsym $mod+Shift+5 move container to workspace $5
+bindsym $mod+Shift+6 move container to workspace $6
+bindsym $mod+Shift+7 move container to workspace $7
+bindsym $mod+Shift+0 move container to workspace $0
+bindsym $mod+Shift+8 move container to workspace $8
 
 # reload the configuration file
 bindsym $mod+Shift+c 	reload
@@ -125,20 +126,6 @@ client.placeholder      $ig     $bg         $fg  $eg
 client.background       $bg 
 
 
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#   status_command i3blocks -c ~/.config/i3/i3blocks.conf
-#   position bottom
-#   colors {
-#   	background $bg
-#   	focused_workspace  $bg			$bg         $fg
-#   	inactive_workspace $bg	 		$bg 		$ig
-#   	urgent_workspace   $bg   		$bg   		$ig
-#   	}
-#
-
 #KEYBINDINGS
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
@@ -163,43 +150,48 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 #ROFI
 bindsym $mod+space exec rofi -show drun -modi combi -config ~/dotfiles/rofi/rofi.config
 
-# QUTEBROWSER
-bindsym $mod1+q exec qutebrowser
 
 #Custom app shortcuts
 bindsym $mod1+g 	exec google-chrome-stable 
 bindsym $mod1+f		exec firefox
-bindsym $mod1+e 	exec thunar
-bindsym $mod1+r    	exec termite -e ranger
-bindsym $mod1+s		exec termite -e ncmpcpp
+bindsym $mod1+r    	exec termite -e ranger -t ranger
+bindsym $mod1+s		exec termite -e ncmpcpp -t music
+bindsym $mod1+m     exec termite -e neomutt -t mail
+bindsym $mod1+q     exec qutebrowser
+
 
 #Wallpapers and startup apps
 exec --no-startup-id wal -q -t -i ~/Pictures/darksouls.jpg
 exec --no-startup-id mopidy &
-exec_always compton -b --config ~/dotfiles/compton/comptonrc &
+exec --no-startup-id compton -b --config ~/dotfiles/compton/comptonrc &
 exec --no-startup-id dunst -conf ~/dotfiles/dunst/dunstrc
 exec --no-startup-id ckb -b
 exec --no-startup-id rambox
 exec --no-startup-id slack
 exec --no-startup-id $HOME/dotfiles/polybar/launch.sh
 exec --no-startup-id numlockx &
+exec --no-startup-id redshift &
 
 #Assign apps to workspaces
-assign [class="Spotify"] 	$workspace4
-assign [class="vlc"] 		$workspace5
-assign [class="Rambox"] 	$workspace6
-assign [class="ckb"]		$workspace6
-assign [class="Slack"]		$workspace6
+assign [class="Spotify"] 	$4
+assign [class="vlc"] 		$5
+assign [class="Rambox"] 	$6
+assign [class="Slack"]		$6
+assign [class="jetbrains-pycharm-ce"]   $5
+assign [class="Code"]       $3
+assign [title="music"]      $4
+assign [title="mail"]       $8
+
 
 #GAPS
 hide_edge_borders 			both
 for_window [class="^.*"] 		border pixel 0
-for_window [class="Thunar"] 		floating enable, move absolute center 
-for_window [class="Pavucontrol"] 	floating enable, move absolute center 
-for_window [window_role="pop-up"] 	floating enable, move absolute center 
-for_window [class="Pamac-manager"] 	floating enable, move absolute center 
-for_window [class="vlc"] 	 	floating enable, move absolute center 
-for_window [class="Join"] 		floating enable, move absolute center 
+for_window [class="Thunar"] 		floating enable, move absolute center
+for_window [class="Pavucontrol"] 	floating enable, move absolute center
+for_window [window_role="pop-up"] 	floating enable, move absolute center
+for_window [class="Pamac-manager"] 	floating enable, move absolute center
+for_window [class="vlc"] 	 	floating enable, move absolute center
+for_window [class="Join"] 		floating enable, move absolute center
 for_window [window_role="task_dialog|bubble|page-info|Preferences|pop-up"] floating enable
 for_window [window_role="Open Files"] 	floating enable sticky
 for_window [window_role="File Operation Progress"] floating enable sticky
@@ -212,14 +204,14 @@ gaps inner 20
 gaps outer 0
 
 # Set Monitor variables
-set $m1 HDMI-0
-set $m2 DVI-I-0
-workspace $workspace1 output $m1
-workspace $workspace2 output $m1
-workspace $workspace3 output $m1
-workspace $workspace4 output $m2
-workspace $workspace5 output $m2
-workspace $workspace6 output $m2
+#set $m1 HDMI-0
+#set $m2 DVI-I-0
+#workspace $workspace1 output $m1
+#workspace $workspace2 output $m1
+#workspace $workspace3 output $m1
+#workspace $workspace4 output $m2
+#workspace $workspace5 output $m2
+#workspace $workspace6 output $m2
 
 #82 = + in keypad
 #89 = - in keypad

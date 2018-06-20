@@ -19,4 +19,8 @@ echo "Termite in Sync"
 
 # ranger
 rsync ~/.config/ranger/rc.conf ~/dotfiles/ranger/rc.conf
+echo "ranger in sync"
 
+# neomutt
+rsync ~/.config/neomutt/neomuttrc ~/dotfiles/neomutt/neomuttrc
+echo "neomutt in sync"

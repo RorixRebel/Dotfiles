@@ -32,9 +32,6 @@ foreground = ${colors.foreground}
 line-size = 1
 line-color = ${colors.alert} 
 
-;border-size = 0.5
-;border-color = #fff
-
 border-left-size = 35
 border-top-size = 5
 
@@ -44,11 +41,11 @@ padding-right = 3
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = FontAwesome:pixelsize=11;1
+font-0 = FontAwesome:pixelsize=10;1
 font-1 = Dina:style=Bold:pixelsize=11;1
-font-3 = Source Code Pro:pixelsize=11;1
 font-2 = siji:pixelsize=11;1
-font-4 = MaterialDesignIcons:pixelsize=11;1
+font-3 = Sauce Code Pro:pixelsize=11;1
+font-4 = MaterialDesignIcons:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = date weather mpd
@@ -81,13 +78,6 @@ label-charging-foreground = ${colors.right}
 label-charging-underline = ${colors.underlines}
 label-full =  %percentage%
 
-[module/work]
-type = custom/script
-interval = 0
-format =  <label>
-format-foreground = ${colors.middle}
-format-underline = ${colors.underlines}
-exec = ~/dotfiles/polybar/workdone.py
 
 [module/pomodoro]
 type = custom/script
@@ -212,7 +202,10 @@ label-foreground = ${colors.middle}
 
 [module/volume]
 type = internal/volume
-interval = 1
+master-soundcard = default
+master-mixer = PCM 
+mapped = true
+
 format-volume = <label-volume>
 label-volume =  %percentage%
 label-volume-foreground = ${colors.right}

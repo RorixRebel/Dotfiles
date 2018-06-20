@@ -1,0 +1,4 @@
+# AUR Packages
+adobe-source-code-pro-fonts
+
+ttf-material-design-icons-git

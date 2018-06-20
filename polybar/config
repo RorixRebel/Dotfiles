@@ -18,7 +18,8 @@ left = ${xrdb:color5}
 alert = #F00
 
 [bar/main]
-monitor = HDMI-0
+# monitor = HDMI-0
+monitor = eDP-1
 width = 98%
 height = 30
 ;offset-x = 0
@@ -203,7 +204,7 @@ label-foreground = ${colors.middle}
 [module/volume]
 type = internal/volume
 master-soundcard = default
-master-mixer = PCM 
+master-mixer = Master 
 mapped = true
 
 format-volume = <label-volume>

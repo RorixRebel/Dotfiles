@@ -53,6 +53,8 @@
             - 'mpv'
             - 'neomutt'
             - 'xclip'
+            - 'redshift'
+            - 'w3m'
         tags:
             - 'arch'
 

@@ -50,11 +50,26 @@ font-4 = MaterialDesignIcons:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = date weather mpd
-modules-right = updates battery backlight volume cpu memory filesystem temperature powermenu
+modules-right = updates battery backlight volume cpu memory filesystem temperature network powermenu
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
+
+[module/network]
+type = internal/network
+interface = wlp58s0 
+interval = 3.0
+accumulate-stats = true
+unknown-as-up = true
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-packetloss = <label-connected>
+label-connected =  %essid%%downspeed:9%
+label-connected-foreground = ${colors.right}
+label-disconnected = not connected
+label-disconnected-foreground = ${colors.foreground}
+label-connected-underline = ${colors.underlines}
 
 [module/backlight]
 type = internal/backlight

@@ -2,11 +2,20 @@
 
 Repo consists of:
 - i3 config
-- i3blocks config(not being used)
 - rofi setup
 - weather script to get data
-> Requires OpenWeather API Key
 - polybar
 - compton
 - vimrc 
+- neomutt
+- ranger
+- dunst
+- ncmpm
+- termite
+- fish shell
+
+Requires following API/Credentials as env variables
+- OpenWeather API
+- Twitter Secret keys
+- Gmail Credentials
 

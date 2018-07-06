@@ -18,7 +18,7 @@ weather_json = weather.json()
 
 
 # Weather Data
-sleep(5)
+sleep(9)
 info = weather_json['weather'][0]['description'].capitalize()
 temp = int(float(weather_json['main']['temp']))
 print("{}, {} °{}".format(info, temp, unit_key))

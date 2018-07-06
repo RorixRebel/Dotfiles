@@ -55,6 +55,9 @@
             - 'xclip'
             - 'redshift'
             - 'w3m'
+            - 'lastpass-cli'
+            - 'playonlinux'
+            - 'lutris'
         tags:
             - 'arch'
 

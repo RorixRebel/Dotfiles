@@ -7,28 +7,17 @@ alias vimpoly="vim ~/dotfiles/polybar/config"
 alias wali="wal -q -t -i ~/Pictures -o ~/dotfiles/polybar/launch.sh"
 alias poly="~/dotfiles/polybar/launch.sh"
 
-# Drives
-alias mdrive="sudo mount /dev/sda1 /mnt"
-alias udrive="sudo umount /dev/sda1/"
-
 
 #Navigation
 alias dot="cd ~/dotfiles"
 alias gfonts="cd /usr/share/fonts"
-alias projects="cd /mnt/Projects"
-alias blog="cd /mnt/Projects/rorixrebel.github.io"
-alias scripts="cd /mnt/Scripts"
-alias data="cd /mnt/"
+alias projects="cd ~/Dev/Projects"
 
-#Python
-alias venv="virtualenv --python=python3 venv"
-alias vact="source venv/bin/activate"
-alias vdec="deactivate"
 
 # Random
-alias update="sudo pacman -Sy"
+alias updateos="sudo pacman -Syu"
+alias updateaur="aurman -Syu"
 alias ll="ls -lrta"
-alias blog="cd /mnt/Projects/rorixrebel.github.io"
 
 # Git
 alias gst="git status"
@@ -37,3 +26,8 @@ alias gcm="git commit -m"
 
 # APIs
 export WEATHER_API="bfd92bb103b04d4f7bc58df281a98909"
+
+
+# GAMES
+alias d2lod="wine /home/rorix/.wine/drive_c/Program\ Files\ \(x86\)/Diablo\ II/Diablo\ II.exe -wd3d"
+alias steamw="wine /home/rorix/.wine/drive_c/Program Files (x86)/Steam/Steam.exe"

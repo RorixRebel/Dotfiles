@@ -18,8 +18,8 @@ left = ${xrdb:color5}
 alert = #F00
 
 [bar/main]
-# monitor = HDMI-0
-monitor = eDP-1
+monitor = HDMI-0
+# monitor = eDP-1
 width = 98%
 height = 30
 ;offset-x = 0
@@ -58,14 +58,15 @@ scroll-down = i3wm-wsprev
 
 [module/network]
 type = internal/network
-interface = wlp58s0 
+interface = enp8s0
+#interface = wlp58s0 
 interval = 3.0
 accumulate-stats = true
 unknown-as-up = true
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 format-packetloss = <label-connected>
-label-connected =  %essid%%downspeed:9%
+label-connected =  %ifname%%downspeed:9%
 label-connected-foreground = ${colors.right}
 label-disconnected = not connected
 label-disconnected-foreground = ${colors.foreground}
@@ -219,7 +220,8 @@ label-foreground = ${colors.middle}
 [module/volume]
 type = internal/volume
 master-soundcard = default
-master-mixer = Master 
+master-mixer = PCM
+# master-mixer = Master 
 mapped = true
 
 format-volume = <label-volume>

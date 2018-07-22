@@ -62,10 +62,10 @@ set $9 "9:"
 set $0 "10:"
 
 #Colors
-set_from_resource $fg i3wm.color7 #ffffff
-set_from_resource $bg i3wm.color2 #ffffff
-set_from_resource $eg i3wm.color4 #ffffff
-set_from_resource $ig i3wm.color0 #ffffff
+set_from_resource $fg i3wm.color7
+set_from_resource $bg i3wm.color2
+set_from_resource $eg i3wm.color4
+set_from_resource $ig i3wm.color0
 
 # switch to workspace
 bindsym $mod+1 workspace $1
@@ -103,10 +103,10 @@ bindsym $mod+Shift+e 	exec "i3-nagbar -t warning -m 'You pressed the exit shortc
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 20 px or 20 ppt
+        bindsym Down resize grow height 20 px or 20 ppt
+        bindsym Up resize shrink height 20 px or 20 ppt
+        bindsym Right resize grow width 20 px or 20 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -118,7 +118,7 @@ bindsym $mod+r 		mode "resize"
 
 # window colors
 #                       border  background  text indicator 
-client.focused          $ig     $bg	    $fg  $eg       
+client.focused          #e200b9     $bg	        $fg  $eg       
 client.focused_inactive $ig     $bg         $fg  $eg      
 client.unfocused        $ig     $bg         $fg  $eg     
 client.urgent           $ig     $bg         $fg  $eg    
@@ -148,7 +148,7 @@ bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 #ROFI
-bindsym $mod+space exec rofi -show drun -modi combi -config ~/dotfiles/rofi/rofi.config
+bindsym $mod+space exec rofi -show drun -sidebar-mode -config ~/dotfiles/rofi/rofi.config
 
 
 #Custom app shortcuts
@@ -161,16 +161,17 @@ bindsym $mod1+q     exec qutebrowser
 
 
 #Wallpapers and startup apps
-exec --no-startup-id wal -q -t -i ~/Pictures/darksouls.jpg
+exec --no-startup-id wal -q -t -i ~/Pictures/
 exec --no-startup-id mopidy &
 exec --no-startup-id compton -b --config ~/dotfiles/compton/comptonrc &
 exec --no-startup-id dunst -conf ~/dotfiles/dunst/dunstrc
-exec --no-startup-id ckb -b
+exec --no-startup-id ckb-next -b
 exec --no-startup-id rambox
 exec --no-startup-id slack
 exec --no-startup-id $HOME/dotfiles/polybar/launch.sh
 exec --no-startup-id numlockx &
 exec --no-startup-id redshift &
+exec --no-startup-id steam
 
 #Assign apps to workspaces
 assign [class="Spotify"] 	$4
@@ -181,11 +182,16 @@ assign [class="jetbrains-pycharm-ce"]   $5
 assign [class="Code"]       $3
 assign [title="music"]      $4
 assign [title="mail"]       $8
+assign [class="Steam"]      $0
 
 
 #GAPS
 hide_edge_borders 			both
 for_window [class="^.*"] 		border pixel 0
+for_window [title="PlayOnLinux"] floating enable, resize set 640 480
+for_window [class="dota2"] fullscreen 
+for_window [title="Steam - News"] floating enable, move absolute center
+for_window [title='Friends'] floating enable, resize set 640 480
 for_window [class="Thunar"] 		floating enable, move absolute center
 for_window [class="Pavucontrol"] 	floating enable, move absolute center
 for_window [window_role="pop-up"] 	floating enable, move absolute center
@@ -198,6 +204,7 @@ for_window [window_role="File Operation Progress"] floating enable sticky
 for_window [window_role="Save As"] 	floating enable
 for_window [window_type="dialog"] 	floating enable
 for_window [window_type="menu"] 	floating enable
+for_window [workspace=$6] layout tabbed
 
 # GAPS
 gaps inner 20

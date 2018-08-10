@@ -25,6 +25,7 @@ Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML
 Plugin 'chriskempson/base16-vim'            " Base 16 colors
 Plugin 'reedes/vim-wordy'                   " Wordy
 Plugin 'dag/vim-fish'                       " Fish Shell
+Plugin 'junegunn/fzf'                       " fuzzyfind
 
 
 " All of your Plugins must be added before the following line

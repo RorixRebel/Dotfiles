@@ -4,7 +4,7 @@
 alias vim="nvim"
 alias vimi3="vim ~/.config/i3/config"
 alias vimpoly="vim ~/dotfiles/polybar/config"
-alias wali="wal -q -t -i ~/Pictures -o ~/dotfiles/polybar/launch.sh"
+alias wali="wal -q -i ~/Pictures "
 alias poly="~/dotfiles/polybar/launch.sh"
 
 
@@ -12,7 +12,7 @@ alias poly="~/dotfiles/polybar/launch.sh"
 alias dot="cd ~/dotfiles"
 alias gfonts="cd /usr/share/fonts"
 alias projects="cd ~/Dev/Projects"
-
+alias notes="cd ~/Dev/Notes"
 
 # Random
 alias updateos="sudo pacman -Syu"
@@ -27,7 +27,5 @@ alias gcm="git commit -m"
 # APIs
 export WEATHER_API="bfd92bb103b04d4f7bc58df281a98909"
 
-
-# GAMES
-alias d2lod="wine /home/rorix/.wine/drive_c/Program\ Files\ \(x86\)/Diablo\ II/Diablo\ II.exe -wd3d"
-alias steamw="wine /home/rorix/.wine/drive_c/Program Files (x86)/Steam/Steam.exe"
+# XXX
+alias jizztime 'firefox --private-window https://www.youjizz.com/'

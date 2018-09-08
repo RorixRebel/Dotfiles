@@ -6,6 +6,10 @@
 ;   The README contains alot of information
 ;
 ;=====================================================
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+
 
 [colors]
 background = ${xrdb:color0}
@@ -19,25 +23,20 @@ alert = #F00
 
 [bar/main]
 monitor = HDMI-0
-# monitor = eDP-1
-width = 98%
+monitor-fallback = eDP-1
+width = 100%
 height = 30
-;offset-x = 0
-;offset-y = 5 
-radius = 4.0
-;fixed-center = True 
+tray-position = right
+fixed-center= true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 1
+line-size = 2
 line-color = ${colors.alert} 
 
-border-left-size = 35
-border-top-size = 5
-
-padding-left = 3
-padding-right = 3
+padding-left = 1
+padding-right = 1
 
 module-margin-left = 2
 module-margin-right = 2
@@ -49,8 +48,8 @@ font-3 = Sauce Code Pro:pixelsize=11;1
 font-4 = MaterialDesignIcons:pixelsize=10;1
 
 modules-left = i3 xwindow
-modules-center = date weather 
-modules-right = updates battery backlight volume cpu memory filesystem temperature network powermenu
+modules-center = date weather mpd spotify
+modules-right = updates battery backlight pulseaudio cpu memory filesystem temperature network powermenu
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -95,16 +94,6 @@ label-charging-foreground = ${colors.right}
 label-charging-underline = ${colors.underlines}
 label-full =  %percentage%
 
-
-[module/pomodoro]
-type = custom/script
-exec = echo "Pomodoro" 
-click-left = ~/dotfiles/polybar/pomodoro.py
-click-right = pkill pomodoro
-label =  %output%
-label-foreground = ${colors.left}
-label-underline = ${colors.underlines}
-tail = true
 
 
 [module/weather]
@@ -192,6 +181,14 @@ format-online-underline=${colors.underlines}
 host = 127.0.0.1
 port = 6600
 
+[module/spotify]
+type=custom/script
+format-prefix= " "
+format-prefix-foreground = ${colors.right}
+format-foreground = ${colors.middle}
+format-underline = ${colors.underlines}
+exec = $HOME/dotfiles/polybar/music
+
 [module/cpu]
 type=internal/cpu
 interval=2
@@ -210,27 +207,22 @@ label-foreground = ${colors.right}
 
 [module/date]
 type = internal/date
-interval = 5
-date = %b-%d
-time = %H:%M
+date = %Y-%m-%d %H:%M
 format-underline = ${colors.underlines}
-label =  %date% - %time%
+label =  %date%
 label-foreground = ${colors.middle}
 
-[module/volume]
-type = internal/volume
-master-soundcard = default
-master-mixer = PCM
-# master-mixer = Master 
-mapped = true
+[module/pulseaudio]
+type = internal/pulseaudio
+interval = 5
 
 format-volume = <label-volume>
 label-volume =  %percentage%
 label-volume-foreground = ${colors.right}
 label-volume-underline = ${colors.underlines}
-format-muted-prefix = " MUTED"
+format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground}
-label-muted = sound muted
+label-muted = Muted
 
 [module/temperature]
 type = internal/temperature
@@ -239,8 +231,8 @@ warn-temperature = 75
 format = <label>
 format-foreground = ${colors.right}
 format-underline = ${colors.underlines}
-label =  %temperature%
-label-warn = %temperature%
+label =  %temperature-c%
+label-warn = %temperature-c%
 label-warn-foreground = ${colors.foreground}
 
 [module/powermenu]
@@ -267,8 +259,5 @@ compositing-background = xor
 ;compositing-foreground = source
 ;compositing-border = over
 
-[global/wm]
-margin-top = 0
-margin-bottom = 0
 
 ; vim:ft=dosini

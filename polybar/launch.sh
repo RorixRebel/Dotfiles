@@ -8,4 +8,4 @@ killall -q weather.py
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bar
-polybar -c $HOME/dotfiles/polybar/config main &
+polybar -q -c $HOME/dotfiles/polybar/config main &

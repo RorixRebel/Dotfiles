@@ -43,7 +43,6 @@ let g:airline_theme='molokai'               " set airline theme
 let g:airline#extensions#tabline#enabled = 1
 syntax enable                               " enable syntax highlighting
 
-set shell=/bin/bash
 set number                                  " show line numbers
 set ruler
 set ttyfast                                 " terminal acceleration

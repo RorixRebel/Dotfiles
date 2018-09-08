@@ -56,9 +56,9 @@ set $3 "3:"
 set $4 "4:"
 set $5 "5:"
 set $6 "6:"
-set $7 "7:"
+set $7 "7:"
 set $8 "8:"
-set $9 "9:"
+set $9 "9:"
 set $0 "10:"
 
 #Colors
@@ -113,7 +113,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r 		mode "resize"
+bindsym $mod+r  mode "resize"
 
 
 # window colors
@@ -133,11 +133,11 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
 # # Media player controls
+bindsym XF86AudioPause exec playerctl plause 
 bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioStop exec playerctl stop
-bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioStop exec playerctl stop
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 20 # increase screen brightness
@@ -148,21 +148,16 @@ bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 #ROFI
-bindsym $mod+space exec rofi -show drun -sidebar-mode -config ~/dotfiles/rofi/rofi.config
-
+bindsym $mod+space exec rofi -show drun -sidebar-mode -show-icons -config ~/dotfiles/rofi/rofi.config
 
 #Custom app shortcuts
-bindsym $mod1+g 	exec google-chrome-stable 
+bindsym $mod1+g 	exec google-chrome-stable
 bindsym $mod1+f		exec firefox
 bindsym $mod1+r    	exec termite -e ranger -t ranger
-bindsym $mod1+s		exec termite -e ncmpcpp -t music
-bindsym $mod1+m     exec termite -e neomutt -t mail
-bindsym $mod1+q     exec qutebrowser
-
+bindsym $mod1+s		exec termite -e ncmpcpp -t music 
 
 #Wallpapers and startup apps
 exec --no-startup-id wal -q -t -i ~/Pictures/
-exec --no-startup-id mopidy &
 exec --no-startup-id compton -b --config ~/dotfiles/compton/comptonrc &
 exec --no-startup-id dunst -conf ~/dotfiles/dunst/dunstrc
 exec --no-startup-id ckb-next -b
@@ -170,7 +165,8 @@ exec --no-startup-id rambox
 exec --no-startup-id slack
 exec --no-startup-id $HOME/dotfiles/polybar/launch.sh
 exec --no-startup-id numlockx &
-exec --no-startup-id redshift &
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent &
+exec --no-startup-id redshift-gtk &
 exec --no-startup-id steam
 
 #Assign apps to workspaces
@@ -180,18 +176,18 @@ assign [class="Rambox"] 	$6
 assign [class="Slack"]		$6
 assign [class="jetbrains-pycharm-ce"]   $5
 assign [class="Code"]       $3
-assign [title="music"]      $4
-assign [title="mail"]       $8
 assign [class="Steam"]      $0
-
+assign [class="Spotify"]    $4
+assign [class="dota2"]      $9
+assign [class="Spotify"]    $4
 
 #GAPS
 hide_edge_borders 			both
 for_window [class="^.*"] 		border pixel 0
-for_window [title="PlayOnLinux"] floating enable, resize set 640 480
-for_window [class="dota2"] fullscreen 
+for_window [class="dota2"] gaps inner 0, gaps outer 0, layout tabbed
 for_window [title="Steam - News"] floating enable, move absolute center
 for_window [title='Friends'] floating enable, resize set 640 480
+for_window [title='Lutris'] floating enable, resize set 640 480
 for_window [class="Thunar"] 		floating enable, move absolute center
 for_window [class="Pavucontrol"] 	floating enable, move absolute center
 for_window [window_role="pop-up"] 	floating enable, move absolute center
@@ -205,20 +201,12 @@ for_window [window_role="Save As"] 	floating enable
 for_window [window_type="dialog"] 	floating enable
 for_window [window_type="menu"] 	floating enable
 for_window [workspace=$6] layout tabbed
+#for_window [title="music"] floating enable, move scratchpad
+for_window [class="Steam"] floating enable
 
 # GAPS
-gaps inner 20
-gaps outer 0
-
-# Set Monitor variables
-#set $m1 HDMI-0
-#set $m2 DVI-I-0
-#workspace $workspace1 output $m1
-#workspace $workspace2 output $m1
-#workspace $workspace3 output $m1
-#workspace $workspace4 output $m2
-#workspace $workspace5 output $m2
-#workspace $workspace6 output $m2
+gaps inner 10
+gaps outer 5
 
 #82 = + in keypad
 #89 = - in keypad
@@ -232,7 +220,6 @@ bindcode $mod+Shift+86		gaps inner current minus 9
 #Log out Reboot and PowerOFF
 mode "Exit (L)ogout, (R)eboot, (P)oweroff, (S)Suspend" {
         bindsym $mod+r exec systemctl reboot
-        bindsym $mod+l exit
         bindsym $mod+p exec systemctl poweroff
         bindsym $mod+s exec systemctl suspend, mode "default"
 
@@ -243,6 +230,16 @@ mode "Exit (L)ogout, (R)eboot, (P)oweroff, (S)Suspend" {
 
 bindsym $mod+Shift+q mode "Exit (L)ogout, (R)eboot, (P)oweroff, (S)Suspend"
 
+
+
+mode "Gaming" {
+    # back to normall, disable everything else
+    bindsym $mod+Shift+Scroll_Lock mode "default"
+}
+
+bindsym $mod+Scroll_Lock mode "Gaming"
+
+
 # Scratchpad
-bindsym $mod1+` move scratchpad
-bindsym $mod1+Shift+` scratchpad show
+bindsym $mod+grave move scratchpad
+bindsym $mod+Shift+grave scratchpad show

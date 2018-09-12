@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 
 import requests
 import os
@@ -13,12 +13,22 @@ URL = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units={}".fo
 
 
 # Request
-weather = requests.get(URL)
-weather_json = weather.json()
+try:
+    weather = requests.get(URL)
+    weather_json = weather.json()
+except:
+    pass
 
 
 # Weather Data
-sleep(9)
-info = weather_json['weather'][0]['description'].capitalize()
-temp = int(float(weather_json['main']['temp']))
-print("{}, {} °{}".format(info, temp, unit_key))
+if weather:
+    info = weather_json['weather'][0]['description'].capitalize()
+    temp = int(float(weather_json['main']['temp']))
+
+    try:
+        with open('/home/rorix/dotfiles/polybar/temp.txt', mode='w+') as file:
+            file.write("{}, {} °{}".format(info, temp, unit_key))
+    except IOError as e:
+        print('File does not exist')
+
+

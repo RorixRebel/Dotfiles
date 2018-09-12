@@ -1,3 +1,5 @@
 .ropeproject
+*tempt.txt*
+.vscode
 *.pyc
 *.retry

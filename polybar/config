@@ -224,6 +224,7 @@ label-volume-underline = ${colors.underlines}
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground}
 label-muted = Muted
+click-left=pactl set-sink-volume @DEFAULT_SINK@ 0%
 
 [module/temperature]
 type = internal/temperature

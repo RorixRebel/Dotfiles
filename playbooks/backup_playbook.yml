@@ -53,6 +53,7 @@
             - 'fzf'
             - 'postman-bin'
             - 'elasticsearch'
+            - 'prettyping'
         tags:
             - 'arch'
 

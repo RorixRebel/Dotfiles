@@ -8,12 +8,12 @@ alias wali="wal -i ~/Pictures > /dev/null 2>&1"
 alias poly="~/dotfiles/polybar/launch.sh"
 alias cat="bat"
 alias du="ncdu"
+alias ping="prettyping"
 
 #Navigation
 alias dot="cd ~/dotfiles"
 alias gfonts="cd /usr/share/fonts"
-alias projects="cd ~/Dev/Projects"
-alias notes="cd ~/Dev/Notes"
+alias projects="cd ~/Dev/"
 
 # Random
 alias updateos="sudo pacman -Syu"

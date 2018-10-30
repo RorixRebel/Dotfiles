@@ -9,10 +9,10 @@
             state: present
         loop:
             - 'rofi'
+            - 'imagemagick'
             - 'ansible'
             - 'compton'
             - 'fish'
-            - 'dunst'
             - 'docker'
             - 'i3-gaps'
             - 'jq'
@@ -37,12 +37,10 @@
             - 'mongodb'
             - 'neofetch'
             - 'postman-bin'
-            - 'rambox'
+            - 'rambox-bin'
             - 'rsync'
             - 'rclone'
             - 'spotify'
-            - 'thunar'
-            - 'thunar'
             - 'vagrant'
             - 'virtualbox'
             - 'visual-studio-code-bin'
@@ -52,8 +50,10 @@
             - 'w3m'
             - 'fzf'
             - 'postman-bin'
-            - 'elasticsearch'
             - 'prettyping'
+            - 'bat'
+            - 'ncdu'
+            - 'python-pip'
         tags:
             - 'arch'
 

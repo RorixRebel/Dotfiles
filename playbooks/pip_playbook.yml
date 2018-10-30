@@ -22,6 +22,7 @@
         - 'ghp-import'
         - 'mycli'
         - 'ptpython'
+        - 'pywal'
         - 'pipenv'
         - 'youtube-dl'
     tags:

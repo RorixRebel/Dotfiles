@@ -1,4 +1,13 @@
 # AUR Packages
 adobe-source-code-pro-fonts
-
+dina-font
+etcher
+httpie
+krita
+gimp
+zeal
+xboxdrv
+lastpass-cli
+numlock
+rmlint
 ttf-material-design-icons-git

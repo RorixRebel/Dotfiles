@@ -11,3 +11,9 @@ lastpass-cli
 numlock
 rmlint
 ttf-material-design-icons-git
+android-studio
+wireshark
+nmap
+slack
+docker
+rclone

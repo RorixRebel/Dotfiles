@@ -9,13 +9,16 @@ echo "I3 in sync"
 rsync ~/.config/nvim/init.vim ~/dotfiles/nvim/init.vim
 echo "Nvim in sync"
 
-# termite
-rsync ~/.config/termite/config ~/dotfiles/termite/config
-echo "Termite in Sync"
-
 # ranger
 rsync ~/.config/ranger/rc.conf ~/dotfiles/ranger/rc.conf
 echo "ranger in sync"
 
 # fish
 rsync ~/.config/fish/ ~/dotfiles/fish/
+echo "fish in sync"
+
+# alacritty
+rsync ~/.config/alacritty/alacritty.yml ~/dotfiles/alacritty
+echo "alacritty in sync"
+
+

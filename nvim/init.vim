@@ -5,7 +5,7 @@ set showtabline=0
 set clipboard+=unnamedplus
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/bundle/Vundle.vim
+set rtp+=~/.config/nvim/Vundle.vim
 call vundle#begin()
 
 "call vundle#begin('~/some/path/here')

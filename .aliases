@@ -4,7 +4,7 @@
 alias vim="nvim"
 alias vimi3="vim ~/.config/i3/config"
 alias vimpoly="vim ~/dotfiles/polybar/config"
-alias wali="wal -i ~/Pictures > /dev/null 2>&1"
+alias wali="wal -s -i ~/Pictures > /dev/null 2>&1"
 alias poly="~/dotfiles/polybar/launch.sh"
 alias cat="bat"
 alias du="ncdu"
@@ -17,7 +17,7 @@ alias projects="cd ~/Dev/"
 
 # Random
 alias updateos="sudo pacman -Syu"
-alias updateaur="aurman -Syu"
+alias updateaur="yay -Syu"
 alias ll="ls -lrta"
 
 # Git

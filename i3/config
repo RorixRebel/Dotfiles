@@ -7,7 +7,7 @@ set $mod1 mod1
 font pango: Source Code Pro 12
 
 # start a terminal
-bindsym $mod+Return 	exec konsole
+bindsym $mod+Return 	exec termite
 
 # kill focused window
 bindsym $mod+q	       	kill
@@ -150,16 +150,19 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 #ROFI
 bindsym $mod+space exec rofi -show drun -sidebar-mode -show-icons -config ~/dotfiles/rofi/rofi.config
 
+#DMENU
+bindsym $mod+d exec dmenu_run -w 1000 -p "Run:"
+
 #Custom app shortcuts
 bindsym $mod1+g 	exec google-chrome-stable
 bindsym $mod1+f		exec firefox
-bindsym $mod1+r    	exec konsole -e ranger
-bindsym $mod1+s		exec konsole -e ncmpcpp
+bindsym $mod1+r    	exec termite -e ranger
+bindsym $mod1+s		exec termite -e ncmpcpp
 
 #Wallpapers and startup apps
 exec --no-startup-id wal -q -t -i ~/Pictures/
-#exec --no-startup-id compton -b --config ~/dotfiles/compton/comptonrc &
-#exec --no-startup-id dunst -conf ~/dotfiles/dunst/dunstrc
+exec --no-startup-id compton -b --config ~/dotfiles/compton/comptonrc &
+exec --no-startup-id dunst -conf ~/dotfiles/dunst/dunstrc
 exec --no-startup-id ckb-next -b
 exec --no-startup-id rambox
 exec --no-startup-id slack

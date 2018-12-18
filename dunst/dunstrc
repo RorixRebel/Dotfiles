@@ -303,13 +303,17 @@
 #
 
 [Spotify]
-    appname=Spotify
+    appname = Spotify
     background = "#648F00"
     foreground = "#ffffff"
 
 [Dota2]
-    appname=dota2
+    appname = dota2
     background = "#ff0000"
     foreground = "ffffff"
+
+[Rambox]
+    appname = Rambox
+    background =
 
 # vim: ft=cfg

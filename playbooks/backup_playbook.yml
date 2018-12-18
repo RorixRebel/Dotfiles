@@ -55,11 +55,16 @@
             - 'wireshark-gtk'
             - 'nmap'
             - 'gimp'
-            - 'postman-bin'
             - 'prettyping'
+            - 'ckb-next'
             - 'bat'
             - 'ncdu'
             - 'python-pip'
+            - 'pavucontrol'
+            - 'pulseaudio-alsa'
+            - 'adobe-source-code-pro-fonts'
+            - 'ttf-font-awesome-4'
+            - 'ttf-material-design-icons'
         tags:
             - 'arch'
 

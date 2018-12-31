@@ -7,5 +7,5 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bar
-~/dotfiles/polybar/weather.py
+~/dotfiles/polybar/scripts/weather.py
 polybar -q -c $HOME/dotfiles/polybar/config main &

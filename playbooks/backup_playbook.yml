@@ -65,6 +65,14 @@
             - 'adobe-source-code-pro-fonts'
             - 'ttf-font-awesome-4'
             - 'ttf-material-design-icons'
+            - 'betterlockscreen'
+            - 'noto-fonts-emoji'
+            - 'alacritty'
+            - 'gucharmap'
+            - 'yay'
+            - 'dropbox'
+            - 'winetricks'
+            - 'wine-staging'
         tags:
             - 'arch'
 

@@ -22,7 +22,7 @@ Plugin 'scrooloose/nerdtree'                " NerdTREE
 
 "-------------------=== Other ===-------------------------------
 Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
-Plugin 'chriskempson/base16-vim'            " Base 16 colors
+"Plugin 'chriskempson/base16-vim'            " Base 16 colors
 Plugin 'reedes/vim-wordy'                   " Wordy
 Plugin 'dag/vim-fish'                       " Fish Shell
 Plugin 'junegunn/fzf'                       " fuzzyfind

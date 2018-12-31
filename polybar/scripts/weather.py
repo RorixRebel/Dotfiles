@@ -24,10 +24,11 @@ except:
 if weather:
     info = weather_json['weather'][0]['description'].capitalize()
     temp = int(float(weather_json['main']['temp']))
+    name = 'Bloomington'
 
     try:
         with open('/home/rorix/dotfiles/polybar/temp.txt', mode='w+') as file:
-            file.write("{}, {} °{}".format(info, temp, unit_key))
+            file.write(f"{name} - {info}, {temp} °{unit_key}")
     except IOError as e:
         print('File does not exist')
 

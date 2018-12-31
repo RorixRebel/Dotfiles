@@ -14,10 +14,10 @@ margin-top = 0
 background = ${xrdb:color0}
 foreground = ${xrdb:color7}
 underlines = ${xrdb:color1}
-right = ${xrdb:color2}
-middle = ${xrdb:color3}
+right = ${xrdb:color1}
+middle = ${xrdb:color1}
+left = ${xrdb:color1}
 extra = #FFF 
-left = ${xrdb:color5}
 alert = #F00
 
 [bar/main]
@@ -41,9 +41,9 @@ font-1 = "SourceCodePro:style=Bold:pixelsize=9;1"
 font-2 = "Material Icons:style=Regular:pixelsize=10;1"
 font-3 = "TerminessTTF Nerd Font:style=Bold:pixelsize=10;1"
 
-modules-left = i3 xwindow
-modules-center = weather mpd spotify
-modules-right = updates pulseaudio cpu memory filesystem temperature network date
+modules-left = i3 xwindow mpd spotify
+modules-center = time weather 
+modules-right = updates pulseaudio cpu memory filesystem temperature network date steam docker powermenu
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -96,7 +96,21 @@ format =  <label>
 format-foreground = ${colors.middle}
 format-underline = ${colors.underlines}
 exec = cat ~/dotfiles/polybar/temp.txt
-click-left=python ~/dotfiles/polybar/weather.py
+click-left=python $HOME/dotfiles/polybar/scripts/weather.py
+
+[module/docker]
+type = custom/script
+format = <label>
+format-foreground = ${colors.middle}
+format-underline = ${colors.underlines}
+exec = python $HOME/dotfiles/polybar/scripts/docker.py
+
+[module/steam]
+type = custom/script
+format = <label>
+format-foreground = ${colors.middle}
+format-underline = ${colors.underlines}
+exec = python $HOME/dotfiles/polybar/scripts/steam.py
 
 
 [module/updates]
@@ -191,7 +205,7 @@ format-prefix= " "
 format-prefix-foreground = ${colors.right}
 format-foreground = ${colors.middle}
 format-underline = ${colors.underlines}
-exec = $HOME/dotfiles/polybar/music
+exec = $HOME/dotfiles/polybar/scripts/music
 
 [module/cpu]
 type=internal/cpu
@@ -211,10 +225,17 @@ label-foreground = ${colors.right}
 
 [module/date]
 type = internal/date
-date = %Y-%m-%d %H:%M
+date = %Y-%m-%d
 format-underline = ${colors.underlines}
 label =  %date%
 label-foreground = ${colors.right}
+
+[module/time]
+type = internal/date
+date = %H:%M
+format-underline = ${colors.underlines}
+label =  %date%
+label-foreground = ${colors.middle}
 
 [module/pulseaudio]
 type = internal/pulseaudio

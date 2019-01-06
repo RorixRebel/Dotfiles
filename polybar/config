@@ -17,17 +17,19 @@ underlines = ${xrdb:color1}
 right = ${xrdb:color1}
 middle = ${xrdb:color1}
 left = ${xrdb:color1}
-extra = #FFF 
-alert = #F00
+extra = #FFFFF
+alert = #F0000
 
 [bar/main]
 monitor = HDMI-0
 monitor-fallback = HDMI-1
 width = 100%
-height = 30
+height = 32
+offset-x = 2%
+offset-y = 2%
 #tray-position = right
-fixed-center= true
-#bottom= true
+fixed-center= false
+bottom = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 line-size = 2
@@ -42,12 +44,13 @@ font-2 = "Material Icons:style=Regular:pixelsize=10;1"
 font-3 = "TerminessTTF Nerd Font:style=Bold:pixelsize=10;1"
 
 modules-left = i3 xwindow mpd spotify
-modules-center = time weather 
+modules-center = time weather
 modules-right = updates pulseaudio cpu memory filesystem temperature network date steam docker powermenu
 
+cursor-click = pointer
+cursor-scroll = ns-resize
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
-
 
 [module/network]
 type = internal/network
@@ -278,12 +281,12 @@ menu-0-1-exec = sudo reboot
 menu-0-2 = Suspend 
 menu-2-2-exec = systemctl suspend
 
-[settings]
-screenchange-reload = true
-compositing-background = xor
+#[settings]
+#screenchange-reload = true
+#compositing-background = xor
 #compositing-background = screen
-compositing-foreground = source
-compositing-border = over
+#compositing-foreground = source
+#compositing-border = over
 
 
 ; vim:ft=dosini

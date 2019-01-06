@@ -128,9 +128,9 @@ client.background       $bg
 
 #KEYBINDINGS
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%; notify-send 'Volume up'"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%; notify-send 'Volume Down'"
+bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle; notify-send 'Muted'"
 
 # # Media player controls
 bindsym XF86AudioPause exec playerctl plause 
@@ -173,7 +173,7 @@ exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent &
 exec --no-startup-id redshift-gtk &
 exec --no-startup-id steam
 exec --no-startup-id rclone mount gdrive:/ ~/Google_Drive &
-exec --no-startup-id rclone mount onedrive:/ ~/OneDrive &
+#exec --no-startup-id rclone mount onedrive:/ ~/OneDrive &
 
 #Assign apps to workspaces
 assign [class="Spotify"] 	$4

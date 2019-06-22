@@ -1,5 +1,5 @@
 --- # Backup playbook
-- hosts: localhost
+- hosts: local
   gather_facts: no
   connection: local
   tasks:
@@ -66,10 +66,10 @@
         use: yay
         skip_installed: yes
         name:
-            - wireshark-gtk
+            #W- wireshark-gtk
             - ttf-font-awesome-4
             - ttf-material-design-icons
             - mailspring
-            - android-studio       
+            #- android-studio       
     tags:
         - arch-aur

@@ -1,0 +1,15 @@
+---
+# tasks file for aur
+- name: Install from AUR
+  aur:
+      use: yay
+      skip_installed: yes
+      aur_only: yes
+      name:
+      - ttf-font-awesome-4
+      - ttf-material-design-icons
+      - mailspring
+      - wireshark-gtk
+      - android-studio       
+  tags:
+      - arch-aur

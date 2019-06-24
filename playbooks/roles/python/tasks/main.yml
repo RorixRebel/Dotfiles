@@ -1,0 +1,16 @@
+---
+# tasks file for python
+- name: Install pip packages
+  pip:
+      name: '{{item}}'
+      state: present
+  loop:
+      - pelican
+      - ghp-import
+      - mycli
+      - ptpython
+      - pywal
+      - pipenv
+      - markdown
+  tags:
+      - pip

@@ -1,0 +1,59 @@
+---
+# tasks file for base
+- name : Install applications from pacaur
+  become: yes
+  become_method: sudo
+  pacman:
+      name: '{{ item }}'
+      state: present
+  loop:
+      - rofi
+      - imagemagick
+      - docker
+      - jq
+      - neovim
+      - nodejs
+      - npm
+      - playerctl
+      - vagrant
+      - virtualbox
+      - lxappearance
+      - chromium
+      - neofetch
+      - postman-bin
+      - rambox-bin
+      - rsync
+      - rclone
+      - spotify
+      - visual-studio-code-bin
+      - mpv
+      - xclip
+      - redshift
+      - fzf
+      - httpie
+      - zeal
+      - lastpass-cli
+      - nmap
+      - gimp
+      - prettyping
+      - bat
+      - ncdu
+      - python-pip
+      - pavucontrol
+      - pulseaudio-alsa
+      - adobe-source-code-pro-fonts
+      - noto-fonts-emoji
+      - yay
+      - dropbox
+      - konsole
+      - transmission-gtk
+      - clementine
+      - krusader
+      - wps-office
+      - inkscape
+      - zsh
+      - go
+      - terraform
+      - slack-desktop
+  tags:
+      - arch-base

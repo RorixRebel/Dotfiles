@@ -1,0 +1,43 @@
+---
+# tasks file for elastic
+- name: Bootstrap elastic stack
+  block:
+  - name: Download elastic stack - no beats
+    get_url:
+      # Example URL https://artifacts.elastic.co/downloads/kibana/kibana-7.1.0-linux-x86_64.tar.gz
+      url: https://artifacts.elastic.co/downloads/{{ item }}/{{ item }}-{{ version }}-linux-x86_64.tar.gz    
+      dest: /tmp
+    loop: 
+      - elasticsearch
+      - kibana
+    tags:
+      - elastic-download
+
+  - name: Download beats
+    get_url: 
+      # Example URL # https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.1.1-linux-x86_64.tar.gz
+      url: https://artifacts.elastic.co/downloads/beats/{{ item }}/{{ item }}-{{ version }}-linux-x86_64.tar.gz
+      dest: /tmp
+    loop:
+      - filebeat
+      - metricbeat
+      - heartbeat
+
+  - name: Unpack tarballs
+    unarchive:
+      src: /tmp/{{ item }}-{{ version }}-linux-x86_64.tar.gz
+      dest: ~/apps
+    loop:
+      - elasticsearch
+      - filebeat
+      - metricbeat
+      - heartbeat
+      - kibana
+    tags:
+      - elastic-setup
+
+
+
+
+  
+

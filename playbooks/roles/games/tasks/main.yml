@@ -1,0 +1,21 @@
+---
+# tasks file for misc
+- name: Install game packages for homePC
+  become: yes
+  become_method: sudo
+  pacman:
+    name: '{{ item }}'
+    state: present
+  loop:
+    - wine-staging
+    - steam
+    - lutris
+    - ckb-next
+    - xboxdrv
+    - lib32-gnutls 
+    - lib32-libldap 
+    - lib32-libgpg-error 
+    - lib32-sqlite 
+    - lib32-libpulse
+  tags:
+    - games

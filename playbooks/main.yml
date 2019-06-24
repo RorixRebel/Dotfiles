@@ -1,0 +1,10 @@
+--- # Main playbook
+- hosts: local
+  gather_facts: no
+  connection: local
+  roles:
+    #- aur
+    #- base
+    - elastic
+    #- python
+    #- games

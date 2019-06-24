@@ -1,0 +1,14 @@
+[Unit]
+Description=Filebeat
+Documentation=https://www.elastic.co/guide
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+User=rorix
+Group=rorix
+ExecStart=/home/rorix/apps/filebeat-7.0.1-linux-x86_64/filebeat -c /home/rorix/apps/filebeat-7.0.1-linux-x86_64/filebeat.yml
+
+[Install]
+WantedBy=multi-user.target

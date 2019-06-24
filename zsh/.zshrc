@@ -101,3 +101,4 @@ export EDITOR='nvim'
 source ~/dotfiles/.aliases
 export PATH=$PATH:~/.local/bin
 source ~/.local/bin/aws_zsh_completer.sh
+

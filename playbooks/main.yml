@@ -3,8 +3,9 @@
   gather_facts: no
   connection: local
   roles:
-    #- aur
-    #- base
+    - aur
+    - base
     - elastic
-    #- python
-    #- games
+    - python
+    - games
+    - pi

@@ -21,7 +21,6 @@
       - chromium
       - neofetch
       - postman-bin
-      - rambox-bin
       - rsync
       - rclone
       - spotify
@@ -54,6 +53,6 @@
       - zsh
       - go
       - terraform
-      - slack-desktop
+      - firefox
   tags:
       - arch-base

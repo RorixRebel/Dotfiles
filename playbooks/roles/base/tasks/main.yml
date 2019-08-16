@@ -33,7 +33,6 @@
       - zeal
       - lastpass-cli
       - nmap
-      - gimp
       - prettyping
       - bat
       - ncdu
@@ -49,10 +48,10 @@
       - clementine
       - krusader
       - wps-office
-      - inkscape
       - zsh
       - go
       - terraform
       - firefox
+      - filezilla
   tags:
       - arch-base

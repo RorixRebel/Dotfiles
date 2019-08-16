@@ -22,6 +22,8 @@
       - filebeat
       - metricbeat
       - heartbeat
+    tags:
+      - download-beats
 
   - name: Unpack tarballs
     unarchive:
@@ -36,8 +38,24 @@
     tags:
       - elastic-setup
 
-
-
-
+  - name: Copy services
+    template:
+      src: ~/dotfiles/playbooks/roles/elastic/templates/{{ item }}.j2
+      dest: /etc/systemd/system/{{ item }}
+      owner: root
+      group: root
+    loop:
+      - elasticsearch.service
+      - filebeat.service
+      - metricbeat.service
+      - kibana.service
+    notify:
+      - elastic-handler
+      - kibana-handler
+      - filebeat-handler
+      - metricbeat-handler
+    tags:
+      - deploy-systemd
+  
   
 

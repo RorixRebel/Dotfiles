@@ -4,8 +4,8 @@
   connection: local
   roles:
     - aur
-    - base
-    - elastic
-    - python
-    - games
-    - pi
+    #- base
+    #- python
+    #- games
+    #- pi
+    #- snaps

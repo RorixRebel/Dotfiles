@@ -12,5 +12,6 @@
       - pywal
       - pipenv
       - markdown
+      - pipx
   tags:
       - pip

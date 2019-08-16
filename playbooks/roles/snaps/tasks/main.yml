@@ -1,0 +1,14 @@
+--- # Install from snapstore
+- name: Install apps
+  become: yes
+  snap:
+    name:
+      - gitkraken
+      - inkscape
+      - gimp
+      - krita
+      - notepadqq
+      - rambox
+    state: present
+  tags:
+    - snap

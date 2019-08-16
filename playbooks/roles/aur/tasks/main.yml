@@ -9,11 +9,11 @@
       - ttf-font-awesome-4
       - ttf-material-design-icons
       - mailspring
-      #- wireshark-gtk
+      - wireshark-gtk
       - android-studio
-      - lazydocker
       - bind
-      - rambox-bin
       - slack-desktop
+      - discord
+      - tor-browser
   tags:
       - arch-aur

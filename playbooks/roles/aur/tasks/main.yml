@@ -7,13 +7,14 @@
       aur_only: yes
       name:
       - ttf-font-awesome-4
+      - snapd
       - ttf-material-design-icons
       - mailspring
       - wireshark-gtk
       - android-studio
-      - bind
+      #- bind
       - slack-desktop
       - discord
-      - tor-browser
+      #- tor-browser
   tags:
       - arch-aur

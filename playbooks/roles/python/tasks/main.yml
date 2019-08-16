@@ -1,6 +1,7 @@
 ---
 # tasks file for python
 - name: Install pip packages
+  ignore_errors: yes
   pip:
       name: '{{item}}'
       state: present

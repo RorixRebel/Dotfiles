@@ -3,7 +3,6 @@
   become: yes
   snap:
     name:
-      - gitkraken
       - inkscape
       - gimp
       - krita

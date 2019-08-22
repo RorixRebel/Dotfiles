@@ -1,2 +1,10 @@
 ---
 # tasks file for pi
+- name: Install for PI
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - 
+  tags:
+      - pi

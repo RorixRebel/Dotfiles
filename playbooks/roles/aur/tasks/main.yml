@@ -12,9 +12,11 @@
       - mailspring
       - wireshark-gtk
       - android-studio
-      #- bind
       - slack-desktop
       - discord
-      #- tor-browser
+      - tor-browser
+      - boostnote
+      - lazygit
+      - flatpak
   tags:
       - arch-aur

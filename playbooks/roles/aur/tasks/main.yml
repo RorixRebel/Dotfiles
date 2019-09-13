@@ -2,10 +2,10 @@
 # tasks file for aur
 - name: Install from AUR
   aur:
-      use: yay
-      skip_installed: yes
-      aur_only: yes
-      name:
+    use: yay
+    skip_installed: yes
+    aur_only: yes
+    name:
       - ttf-font-awesome-4
       - snapd
       - ttf-material-design-icons
@@ -19,4 +19,4 @@
       - lazygit
       - flatpak
   tags:
-      - arch-aur
+    - arch-aur

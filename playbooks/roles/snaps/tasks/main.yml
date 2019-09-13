@@ -10,4 +10,4 @@
       - rambox
     state: present
   tags:
-    - snap
+    - snaps

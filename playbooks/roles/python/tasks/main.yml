@@ -5,6 +5,7 @@
   pip:
       name: '{{item}}'
       state: present
+      extra_args: --user
   loop:
       - pelican
       - ghp-import
@@ -12,7 +13,6 @@
       - ptpython
       - pywal
       - pipenv
-      - markdown
       - pipx
   tags:
       - pip

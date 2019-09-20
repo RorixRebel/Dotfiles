@@ -1,5 +1,5 @@
 --- # Main playbook
-- hosts: local
+- hosts: localhost
   gather_facts: no
   connection: local
   roles:

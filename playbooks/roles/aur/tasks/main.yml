@@ -6,11 +6,11 @@
     skip_installed: yes
     aur_only: yes
     name:
-      #- ttf-font-awesome-4
+      - ttf-font-awesome-4
       - snapd
-      #- ttf-material-design-icons
+      - ttf-material-design-icons
       - mailspring
-      #- wireshark-gtk
+      - wireshark-gtk
       - android-studio
       - slack-desktop
       - discord
@@ -23,5 +23,6 @@
       - visual-studio-code-bin
       - dropbox
       - wps-office
+      - notion-app
   tags:
     - arch-aur

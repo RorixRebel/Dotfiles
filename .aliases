@@ -2,9 +2,9 @@
 
 # Customization
 alias vim="nvim"
-alias vimi3="vim ~/.config/i3/config"
+#alias vimi3="vim ~/.config/i3/config"
 #alias vimpoly="vim ~/dotfiles/polybar/config"
-alias wali="wal -s -i ~/Pictures > /dev/null 2>&1"
+#alias wali="wal -s -i ~/Pictures > /dev/null 2>&1"
 #alias poly="~/dotfiles/polybar/launch.sh"
 alias cat="bat"
 alias du="ncdu"
@@ -12,7 +12,7 @@ alias ping="prettyping"
 
 #Navigation
 alias dot="cd ~/dotfiles"
-alias projects="cd ~/Dev/"
+alias projects="cd ~/Projects/"
 
 # Random
 alias updateos="sudo pacman -Syu"

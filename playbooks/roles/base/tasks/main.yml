@@ -1,10 +1,10 @@
 ---
 # tasks file for base
-- name : Install applications from pacaur
+- name: Install applications from pacaur
   become: yes
   become_method: sudo
   pacman:
-      name: '{{ item }}'
+      name: "{{ item }}"
       state: present
   loop:
       - rofi
@@ -28,7 +28,6 @@
       - fzf
       - httpie
       - zeal
-      - lastpass-cli
       - nmap
       - prettyping
       - bat
@@ -36,8 +35,6 @@
       - python-pip
       - pavucontrol
       - pulseaudio-alsa
-      - adobe-source-code-pro-fonts
-      - noto-fonts-emoji
       - yay
       - konsole
       - transmission-gtk

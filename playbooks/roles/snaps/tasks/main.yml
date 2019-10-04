@@ -6,7 +6,6 @@
       - inkscape
       - gimp
       - krita
-      - notepadqq
       - rambox
       - bitwarden
     state: present

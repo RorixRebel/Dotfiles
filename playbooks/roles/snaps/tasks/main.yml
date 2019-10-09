@@ -1,13 +1,26 @@
 --- # Install from snapstore
 - name: Install apps
-  become: yes
-  snap:
-    name:
-      - inkscape
-      - gimp
-      - krita
-      - rambox
-      - bitwarden
-    state: present
+  block:
+    - name: Install non-classic snaps
+      become: yes
+      snap:
+        name:
+          - inkscape
+          - gimp
+          - krita
+          - rambox
+          - bitwarden
+          - exercism
+        state: present
+    - name: Install kubectl
+      become: yes
+      snap:
+        name: kubectl
+        classic: yes
+    - name: Install heroku
+      become: yes
+      snap:
+        name: heroku
+        classic: yes
   tags:
     - snaps

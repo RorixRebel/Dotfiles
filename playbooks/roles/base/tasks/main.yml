@@ -45,5 +45,6 @@
       - terraform
       - firefox
       - filezilla
+      - tree
   tags:
       - arch-base

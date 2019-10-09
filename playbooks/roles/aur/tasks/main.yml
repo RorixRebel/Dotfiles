@@ -9,7 +9,6 @@
       - ttf-font-awesome-4
       - snapd
       - ttf-material-design-icons
-      - mailspring
       - wireshark-gtk
       - android-studio
       - slack-desktop

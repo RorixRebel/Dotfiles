@@ -68,7 +68,7 @@ ZSH_THEME="steeef"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws django docker httpie node npm pip systemd)
+plugins=(git aws django docker httpie node npm pip systemd ansible vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,10 +95,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 export EDITOR='nvim'
 source ~/dotfiles/.aliases
-export PATH=$PATH:~/.local/bin
-source ~/.local/bin/aws_zsh_completer.sh
+source /usr/bin/aws_zsh_completer.sh
 

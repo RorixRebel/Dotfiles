@@ -2,5 +2,5 @@
 localhost ansible_connection=local
 
 [raspberry]
-pi	ansible_user=pi
+192.168.0.13 ansible_user=pi
 

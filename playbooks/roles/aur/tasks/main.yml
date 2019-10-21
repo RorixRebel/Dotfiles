@@ -24,5 +24,6 @@
       - notion-app
       - aws-cli
       - ckb-next
+      - plex-media-server
   tags:
     - arch-aur

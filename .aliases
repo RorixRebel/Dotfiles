@@ -2,10 +2,7 @@
 
 # Customization
 alias vim="nvim"
-#alias vimi3="vim ~/.config/i3/config"
-#alias vimpoly="vim ~/dotfiles/polybar/config"
-#alias wali="wal -s -i ~/Pictures > /dev/null 2>&1"
-#alias poly="~/dotfiles/polybar/launch.sh"
+alias wali="wal -s -i ~/Storage/Wallpapers > /dev/null 2>&1"
 alias cat="bat"
 alias du="ncdu"
 alias ping="prettyping"
@@ -23,7 +20,9 @@ alias ll="ls -lrta"
 alias gst="git status"
 alias gaa="git add ."
 alias gcm="git commit -m"
+alias lg ="lazygit"
 
-# APIs
-export WEATHER_API="bfd92bb103b04d4f7bc58df281a98909"
-
+# I3
+#alias vimi3="vim ~/.config/i3/config"
+#alias vimpoly="vim ~/dotfiles/polybar/config"
+#alias poly="~/dotfiles/polybar/launch.sh"

@@ -45,5 +45,7 @@
       - firefox
       - filezilla
       - tree
+      - calibre
+      - pyqt5-common
   tags:
       - arch-base

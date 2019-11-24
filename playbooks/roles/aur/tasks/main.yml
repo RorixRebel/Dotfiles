@@ -21,9 +21,10 @@
       - visual-studio-code-bin
       - dropbox
       - wps-office
-      - notion-app
       - aws-cli
       - ckb-next
       - plex-media-server
+      - otf-fira-code-git
+      - kafka-manager
   tags:
     - arch-aur

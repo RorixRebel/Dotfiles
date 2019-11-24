@@ -2,7 +2,6 @@
 
 # Customization
 alias vim="nvim"
-alias wali="wal -s -i ~/Storage/Wallpapers > /dev/null 2>&1"
 alias cat="bat"
 alias du="ncdu"
 alias ping="prettyping"
@@ -20,9 +19,10 @@ alias ll="ls -lrta"
 alias gst="git status"
 alias gaa="git add ."
 alias gcm="git commit -m"
-alias lg ="lazygit"
+alias lg="lazygit"
 
 # I3
 #alias vimi3="vim ~/.config/i3/config"
 #alias vimpoly="vim ~/dotfiles/polybar/config"
 #alias poly="~/dotfiles/polybar/launch.sh"
+#alias wali="wal -s -i ~/Storage/Wallpapers > /dev/null 2>&1"

@@ -6,7 +6,7 @@
       flatpak:
         name: org.gnome.Evolution
         state: present
-        method: user
+        # method: user
     - name: Install Meteo
       flatpak:
         name: com.gitlab.bitseater.meteo

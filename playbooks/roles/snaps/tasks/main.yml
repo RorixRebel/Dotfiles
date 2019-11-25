@@ -5,8 +5,7 @@
       become: yes
       snap:
         name:
-          - inkscape
-          - gimp
+           # - inkscape
           - krita
           - rambox
           - bitwarden

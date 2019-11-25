@@ -47,5 +47,6 @@
       - tree
       - calibre
       - pyqt5-common
+      - kvantum-qt5
   tags:
       - arch-base

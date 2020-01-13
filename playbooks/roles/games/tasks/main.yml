@@ -10,7 +10,6 @@
     - wine-staging
     - steam
     - lutris
-    - ckb-next
     - xboxdrv
     - lib32-gnutls 
     - lib32-libldap 

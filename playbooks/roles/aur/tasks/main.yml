@@ -9,21 +9,21 @@
       - ttf-font-awesome-4
       - snapd
       - ttf-material-design-icons
-      #- wireshark-gtk
-      #- android-studio
+      - wireshark-gtk
+      - android-studio
       - slack-desktop
-        #- discord
+      - discord
       - tor-browser
       - lazygit
       - flatpak
       - postman-bin
       - spotify
-      - visual-studio-code-bin
+      - vscodium-bin
       - dropbox
       - wps-office
       - aws-cli
-        #- ckb-next
-        #- plex-media-server
+      - ckb-next
+      - plex-media-server
       - otf-fira-code-git
       - kafka-manager
   tags:

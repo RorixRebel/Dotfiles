@@ -43,7 +43,6 @@
       - go
       - terraform
       - firefox
-      - filezilla
       - tree
       - calibre
       - pyqt5-common

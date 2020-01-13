@@ -1,6 +1,8 @@
 [local]
-localhost ansible_connection=local
+localhost ansible_connection=local tag=home
 
 [raspberry]
-192.168.0.13 ansible_user=pi
+192.168.0.13 ansible_user=pi tag=pi
 
+[server]
+192.168.0.22  ansible_user=admin tag=server

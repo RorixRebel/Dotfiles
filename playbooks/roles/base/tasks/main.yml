@@ -47,5 +47,11 @@
       - calibre
       - pyqt5-common
       - kvantum-qt5
+      - speedtest-cli
+      - smartmontools
+      - wavemon
+      - podman
+      - iperf
+      - latte-dock
   tags:
       - arch-base

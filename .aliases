@@ -8,7 +8,7 @@ alias ping="prettyping"
 
 #Navigation
 alias dot="cd ~/dotfiles"
-alias projects="cd ~/projects/"
+alias projects="cd ~/Projects/"
 
 # Random
 alias updateos="sudo pacman -Syu"
@@ -26,3 +26,8 @@ alias lg="lazygit"
 #alias vimpoly="vim ~/dotfiles/polybar/config"
 #alias poly="~/dotfiles/polybar/launch.sh"
 #alias wali="wal -s -i ~/Storage/Wallpapers > /dev/null 2>&1"
+
+# SSH
+alias sshserver="ssh admin@manjaro-server.home.net"
+alias sshpi="ssh pi@pi.home.net"
+

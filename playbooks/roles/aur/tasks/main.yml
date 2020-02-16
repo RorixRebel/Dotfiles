@@ -14,17 +14,16 @@
       - slack-desktop
       - discord
       - tor-browser
-      - lazygit
       - flatpak
       - postman-bin
       - spotify
       - vscodium-bin
       - dropbox
-      - wps-office
       - aws-cli
-      - ckb-next
+      - ckb-next-git
       - plex-media-server
       - otf-fira-code-git
       - kafka-manager
+      - todoist-linux-bin
   tags:
     - arch-aur

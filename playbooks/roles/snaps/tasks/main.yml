@@ -7,9 +7,10 @@
         name:
           - inkscape
           - krita
-          - rambox
           - bitwarden
           - exercism
+          - lxd
+          - rambox
         state: present
     - name: Install kubectl
       become: yes

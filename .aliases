@@ -19,7 +19,6 @@ alias ll="ls -lrta"
 alias gst="git status"
 alias gaa="git add ."
 alias gcm="git commit -m"
-alias lg="lazygit"
 
 # I3
 #alias vimi3="vim ~/.config/i3/config"
@@ -28,6 +27,6 @@ alias lg="lazygit"
 #alias wali="wal -s -i ~/Storage/Wallpapers > /dev/null 2>&1"
 
 # SSH
-alias sshserver="ssh admin@manjaro-server.home.net"
-alias sshpi="ssh pi@pi.home.net"
+alias sshserver="ssh admin@server.local.net"
+alias sshpi="ssh pi@pi.local.net"
 

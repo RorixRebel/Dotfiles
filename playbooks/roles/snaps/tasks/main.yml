@@ -11,16 +11,18 @@
           - exercism
           - lxd
           - rambox
+          - mailspring
+          - drawio
+          - ngrok
         state: present
-    - name: Install kubectl
+    - name: Install classic apps
       become: yes
       snap:
-        name: kubectl
+        name: "{{ item }}"
         classic: yes
-    - name: Install heroku
-      become: yes
-      snap:
-        name: heroku
-        classic: yes
+      with_items:
+        - kubectl
+        - heroku
+        - helm
   tags:
     - snaps

@@ -2,15 +2,20 @@
 # tasks file for flatpaks
 - name: Install flatpaks
   block:
-    - name: Install Evolution
-      flatpak:
-        name: org.gnome.Evolution
-        state: present
-        # method: user
     - name: Install Meteo
       flatpak:
         name: com.gitlab.bitseater.meteo
         state: present
         method: user
+    - name: Install gPodder
+      flatpak:
+        name: org.gpodder.gpodder
+        state: present
+        method: system
+    - name: Install Rhythmbox
+      flatpak:
+        name: org.gnome.Rhythmbox3
+        state: present
+        method: system
   tags:
     - flatpaks

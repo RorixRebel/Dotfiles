@@ -25,5 +25,7 @@
       - otf-fira-code-git
       - kafka-manager
       - todoist-linux-bin
+      - ripgrep
+      - catt
   tags:
     - arch-aur

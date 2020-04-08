@@ -16,7 +16,6 @@
       - npm
       - playerctl
       - vagrant
-      - virtualbox
       - lxappearance
       - neofetch
       - rsync
@@ -52,9 +51,10 @@
       - podman
       - iperf
       - latte-dock
-      - tmux
       - seahorse
       - progress
       - kleopatra
+      - virt-manager
+      - zoom
   tags:
       - arch-base

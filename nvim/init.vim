@@ -9,27 +9,28 @@ set rtp+=~/.config/nvim/Vundle.vim
 call vundle#begin()
 
 "call vundle#begin('~/some/path/here')
-" let Vundle manage Vundle, required
+"let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 "-------------------=== Code/Project navigation ===-------------
-Plugin 'vim-airline/vim-airline'            " Lean & mean status/tabline for vim
-Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
+"Plugin 'vim-airline/vim-airline'            " Lean & mean status/tabline for vim
+"Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
+Plugin 'itchyny/lightline.vim'               " Lightline statusbar
 Plugin 'MattesGroeger/vim-bookmarks'        " Bookmarks
 Plugin 'thaerkh/vim-indentguides'           " Visual representation of indents
 Plugin 'scrooloose/nerdtree'                " NerdTREE
+Plugin 'arcticicestudio/nord-vim'           " Nord
 
 "-------------------=== Other ===-------------------------------
 Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
 "Plugin 'chriskempson/base16-vim'            " Base 16 colors
 Plugin 'reedes/vim-wordy'                   " Wordy
-Plugin 'dag/vim-fish'                       " Fish Shell
 Plugin 'junegunn/fzf'                       " fuzzyfind
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
 filetype on
 filetype plugin on
 filetype plugin indent on
@@ -38,9 +39,15 @@ filetype plugin indent on
 "" General settings
 "=====================================================
 set encoding=utf-8
+set laststatus=2
 set mouse=a
-let g:airline_theme='molokai'               " set airline theme
-let g:airline#extensions#tabline#enabled = 1
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
+colorscheme nord                             " nord theme
+"let g:airline_theme='solarized'             " set airline theme
+"let g:airline_solarized_bg='dark'           " solarized dark
+"let g:airline#extensions#tabline#enabled = 1
 syntax enable                               " enable syntax highlighting
 
 set number                                  " show line numbers
@@ -92,8 +99,8 @@ set hlsearch	                            " highlight search results
 "=====================================================
 "" AirLine setting
 "=====================================================
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#formatter='unique_tail'
+"let g:airline#extensions#tabline#enabled=1
+"let g:airline#extensions#tabline#formatter='unique_tail'
 
 "=====================================================
 "" Indent Guides Settings 

@@ -29,4 +29,4 @@ alias gcm="git commit -m"
 # SSH
 alias sshserver="ssh admin@server.local.net"
 alias sshpi="ssh pi@pi.local.net"
-
+alias sshkali="ssh rorix@192.168.122.15"

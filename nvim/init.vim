@@ -14,19 +14,28 @@ Plugin 'gmarik/Vundle.vim'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 "-------------------=== Code/Project navigation ===-------------
-"Plugin 'vim-airline/vim-airline'            " Lean & mean status/tabline for vim
-"Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
 Plugin 'itchyny/lightline.vim'               " Lightline statusbar
 Plugin 'MattesGroeger/vim-bookmarks'        " Bookmarks
 Plugin 'thaerkh/vim-indentguides'           " Visual representation of indents
 Plugin 'scrooloose/nerdtree'                " NerdTREE
-Plugin 'arcticicestudio/nord-vim'           " Nord
+Plugin 'arcticicestudio/nord-vim'           " Nord/
+Plugin 'kien/ctrlp.vim'                     " Control P Search
+Plugin 'tpope/vim-fugitive'                 " Git Integration
+Plugin 'ryanoasis/vim-devicons'             " Icons
 
 "-------------------=== Other ===-------------------------------
 Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
-"Plugin 'chriskempson/base16-vim'            " Base 16 colors
+Plugin 'chriskempson/base16-vim'            " Base 16 colors
 Plugin 'reedes/vim-wordy'                   " Wordy
 Plugin 'junegunn/fzf'                       " fuzzyfind
+
+"---------------------Languages ===----------------------------
+"Plugin 'neoclide/coc.nvim', {'branch': 'release'} " Code Completion
+Plugin 'tmhedberg/SimpylFold'               " Fold Code
+Plugin 'vim-scripts/indentpython.vim'       " python indent
+Plugin 'Valloric/YouCompleteMe'             " Code completion
+Plugin 'vim-syntastic/syntastic'            " Syntax Highlight
+Plugin 'nvie/vim-flake8'                    " Flake 8 for formatting
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,10 +53,7 @@ set mouse=a
 let g:lightline = {
       \ 'colorscheme': 'nord',
       \ }
-colorscheme nord                             " nord theme
-"let g:airline_theme='solarized'             " set airline theme
-"let g:airline_solarized_bg='dark'           " solarized dark
-"let g:airline#extensions#tabline#enabled = 1
+colorscheme nord                            " nord theme
 syntax enable                               " enable syntax highlighting
 
 set number                                  " show line numbers
@@ -76,12 +82,15 @@ set clipboard=unnamed                       " use system clipboard
 set exrc                                    " enable usage of additional .vimrc files from working directory
 set secure                                  " prohibit .vimrc files to execute shell, create files, etc...
 
+set foldmethod=indent                       " fold for indented
+set foldlevel=99                            " fold level
+nnoremap <space> za                         " use space to fold instead of za
+
 "=====================================================
 "" Tabs / Buffers settings
 "=====================================================
 tab sball
 set switchbuf=useopen
-set laststatus=2
 nmap <F9> :bprev<CR>
 nmap <F10> :bnext<CR>
 
@@ -96,11 +105,6 @@ nnoremap <F4> :set relativenumber!<CR>
 set incsearch	                            " incremental search
 set hlsearch	                            " highlight search results
 
-"=====================================================
-"" AirLine setting
-"=====================================================
-"let g:airline#extensions#tabline#enabled=1
-"let g:airline#extensions#tabline#formatter='unique_tail'
 
 "=====================================================
 "" Indent Guides Settings 
@@ -123,3 +127,35 @@ noremap <silent> <F8> <C-u>:NextWordy<CR>
 " Spelling
 "=====================================================
 noremap <silent> <F5> :set spell! <CR>
+
+
+"=====================================================
+" Python
+"=====================================================
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \| set softtabstop=4
+    \| set shiftwidth=4
+    \| set textwidth=120
+    \| set expandtab
+    \| set autoindent
+    \| set fileformat=unix
+
+let g:ycm_autoclose_preview_window_after_completion=1     " Close auto complete window when done
+let python_highlight_all=1
+syntax on
+
+"=====================================================
+" JS-HTML-CSS 
+"=====================================================
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \| set softtabstop=2
+    \| set shiftwidth=2
+
+
+"=====================================================
+" Misc
+"=====================================================
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/  " Whitespaces
+

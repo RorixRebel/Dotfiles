@@ -2,28 +2,22 @@ font:
   # The normal (roman) font face to use.
   normal:
     family: Fira Code
-    # Style can be specified to pick a specific face.
-    style: Regular
+    style: Bold
 
   # The bold font face
   bold:
-    family: Fira Code
-    # Style can be specified to pick a specific face.
+    family: Fira Code 
     style: Bold
 
   # The italic font face
-  italic:
+  #italic:
     family: Fira Code
-    # Style can be specified to pick a specific face.
     style: Italic
 
   # Point size
   size: 10.0
 
 # Background opacity
-#
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
 background_opacity: 0.9
 
 # Colors (Nord)
@@ -55,10 +49,10 @@ colors:
      cyan:    '#8FBCBB'
      white:   '#ECEFF4'
 
-shell:
-    program: /usr/bin/tmux
-    args:
-     - -u # force UTF-8 in tmux
+#shell:
+#    program: /usr/bin/tmux
+#    args:
+#     - -u # force UTF-8 in tmux
 
 # Allow terminal applications to change Alacritty's window title.
 dynamic_title: true

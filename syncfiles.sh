@@ -22,3 +22,6 @@ echo "tmux in sync"
 #rsync ~/.config/i3/config  ~/dotfiles/i3
 #echo "i3 in sync"
 
+# alacritty
+rsync ~/.config/alacritty/alacritty.yml ~/dotfiles/alacritty/alacritty.yml
+echo "alacritty in sync"

@@ -27,5 +27,6 @@
       - todoist-linux-bin
       - ripgrep
       - catt
+      - spicetify
   tags:
     - arch-aur

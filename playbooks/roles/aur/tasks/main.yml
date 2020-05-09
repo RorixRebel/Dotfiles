@@ -6,14 +6,13 @@
     skip_installed: yes
     aur_only: yes
     name:
-      - ttf-font-awesome-4
+      # - ttf-font-awesome-4
+      # - ttf-material-design-icons
       - snapd
-      - ttf-material-design-icons
       - wireshark-gtk
       - android-studio
       - slack-desktop
       - discord
-      - tor-browser
       - flatpak
       - postman-bin
       - spotify
@@ -23,10 +22,11 @@
       - ckb-next-git
       - plex-media-server
       - otf-fira-code-git
+      - ttf-jetbrains-mono
       - kafka-manager
-      - todoist-linux-bin
       - ripgrep
       - catt
       - spicetify
+      - joplin
   tags:
     - arch-aur

@@ -1,8 +1,4 @@
 #!/usr/bin/sh
-# i3
-#rsync ~/dotfiles/i3/config ~/.config/i3/config 
-#echo "I3 in sync"
-
 # vimrc
 if [ -d "~/.config/nvim" ]; then
     mkdir ~/.config/nvimg

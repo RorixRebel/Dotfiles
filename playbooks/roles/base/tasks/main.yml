@@ -16,7 +16,6 @@
       - npm
       - playerctl
       - vagrant
-      - lxappearance
       - neofetch
       - rsync
       - rclone
@@ -36,7 +35,6 @@
       - yay
       - konsole
       - transmission-gtk
-      - krusader
       - zsh
       - go
       - terraform
@@ -48,13 +46,13 @@
       - speedtest-cli
       - smartmontools
       - wavemon
-      - podman
       - iperf
       - latte-dock
-      - seahorse
       - progress
-      - kleopatra
       - virt-manager
       - zoom
+      - rmlint
+      - mlocate
+      - cmatrix
   tags:
       - arch-base

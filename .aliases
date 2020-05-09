@@ -15,17 +15,6 @@ alias updateos="sudo pacman -Syu"
 alias updateaur="yay -Syu"
 alias ll="ls -lrta"
 
-# Git
-alias gst="git status"
-alias gaa="git add ."
-alias gcm="git commit -m"
-
-# I3
-#alias vimi3="vim ~/.config/i3/config"
-#alias vimpoly="vim ~/dotfiles/polybar/config"
-#alias poly="~/dotfiles/polybar/launch.sh"
-#alias wali="wal -s -i ~/Storage/Wallpapers > /dev/null 2>&1"
-
 # SSH
 alias sshserver="ssh admin@server.local.net"
 alias sshpi="ssh pi@pi.local.net"

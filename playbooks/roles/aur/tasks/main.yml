@@ -6,8 +6,8 @@
     skip_installed: yes
     aur_only: yes
     name:
-      # - ttf-font-awesome-4
-      # - ttf-material-design-icons
+      - ttf-font-awesome-4
+      - ttf-twemoji-color
       - snapd
       - wireshark-gtk
       - android-studio

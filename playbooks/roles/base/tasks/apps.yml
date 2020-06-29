@@ -1,0 +1,52 @@
+apps:
+  - rofi
+  - imagemagick
+  - nodejs
+  - npm
+  - playerctl
+  - vagrant
+  - mpv
+  - xclip
+  - redshift
+  - zeal
+  - nmap
+  - pavucontrol
+  - pulseaudio-alsa
+  - yay
+  - konsole
+  - transmission-gtk
+  - go
+  - terraform
+  - firefox
+  - calibre
+  - kvantum-qt5
+  - speedtest-cli
+  - smartmontools
+  - wavemon
+  - iperf
+  - latte-dock
+  - virt-manager
+  - zoom
+  - rmlint
+  - mlocate
+  - cmatrix
+
+utilities:
+  - tldr
+  - fd-find
+  - ripgrep
+  - thefuck
+  - progress
+  - tree
+  - rsync
+  - rclone
+  - prettyping
+  - bat
+  - ncdu
+  - neovim
+  - zsh
+  - jq
+  # - docker -- already present in WSL2
+  - fzf
+  - httpie
+  - neofetch

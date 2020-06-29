@@ -1,32 +1,31 @@
----
-# tasks file for aur
-- name: Install from AUR
-  aur:
-    use: yay
-    skip_installed: yes
-    aur_only: yes
-    name:
-      - ttf-font-awesome-4
-      - ttf-twemoji-color
-      - snapd
-      - wireshark-gtk
-      - android-studio
-      - slack-desktop
-      - discord
-      - flatpak
-      - postman-bin
-      - spotify
-      - vscodium-bin
-      - dropbox
-      - aws-cli
-      - ckb-next-git
-      - plex-media-server
-      - otf-fira-code-git
-      - ttf-jetbrains-mono
-      - kafka-manager
-      - ripgrep
-      - catt
-      - spicetify
-      - joplin
-  tags:
-    - arch-aur
+# ---
+# # tasks file for aur
+# - name: Install applications for ARCH
+#   aur:
+#     use: yay
+#     skip_installed: yes
+#     aur_only: yes
+#     name:
+#       - ttf-font-awesome-4
+#       - ttf-twemoji-color
+#       - snapd
+#       - wireshark-gtk
+#       - android-studio
+#       - slack-desktop
+#       - discord
+#       - flatpak
+#       - postman-bin
+#       - spotify
+#       - vscodium-bin
+#       - dropbox
+#       - aws-cli
+#       - ckb-next-git
+#       - plex-media-server
+#       - otf-fira-code-git
+#       - ttf-jetbrains-mono
+#       - kafka-manager
+#       - catt
+#       - spicetify
+#       - joplin
+#   tags:
+#     - arch-aur

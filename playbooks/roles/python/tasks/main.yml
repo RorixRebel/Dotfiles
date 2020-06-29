@@ -3,7 +3,7 @@
 - name: Install pip packages
   ignore_errors: yes
   pip:
-      name: '{{item}}'
+      name: "{{item}}"
       state: present
       extra_args: --user
   loop:
@@ -13,5 +13,6 @@
       - ptpython
       - pipenv
       - pipx
+      - yq
   tags:
       - pip

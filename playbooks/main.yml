@@ -1,11 +1,11 @@
 --- # Main playbook
 - hosts: localhost
-  gather_facts: no
+  gather_facts: yes
   connection: local
   roles:
     - aur
     - base
     - python
-    - games
+    - gaming
     - snaps
     - flatpaks

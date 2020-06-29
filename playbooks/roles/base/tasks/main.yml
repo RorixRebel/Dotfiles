@@ -1,58 +1,20 @@
----
-# tasks file for base
-- name: Install applications from pacaur
+- name: load vars
+  include_vars: apps.yml
+- name: Install applications for Ubuntu
+  become: yes
+  become_method: sudo
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - "{{ utilities }}"
+  when: ansible_facts['distribution'] == "Ubuntu"
+- name: Install applications for Arch-Manjaro
   become: yes
   become_method: sudo
   pacman:
-      name: "{{ item }}"
-      state: present
+    name: "{{ item }}"
+    state: present
   loop:
-      - rofi
-      - imagemagick
-      - docker
-      - jq
-      - neovim
-      - nodejs
-      - npm
-      - playerctl
-      - vagrant
-      - neofetch
-      - rsync
-      - rclone
-      - mpv
-      - xclip
-      - redshift
-      - fzf
-      - httpie
-      - zeal
-      - nmap
-      - prettyping
-      - bat
-      - ncdu
-      - python-pip
-      - pavucontrol
-      - pulseaudio-alsa
-      - yay
-      - konsole
-      - transmission-gtk
-      - zsh
-      - go
-      - terraform
-      - firefox
-      - tree
-      - calibre
-      - pyqt5-common
-      - kvantum-qt5
-      - speedtest-cli
-      - smartmontools
-      - wavemon
-      - iperf
-      - latte-dock
-      - progress
-      - virt-manager
-      - zoom
-      - rmlint
-      - mlocate
-      - cmatrix
-  tags:
-      - arch-base
+    - "{{ utilities }}"
+  when: ansible_facts['distribution'] == "Manjaro" or ansible_facts['distribution'] == "ArchLinux"

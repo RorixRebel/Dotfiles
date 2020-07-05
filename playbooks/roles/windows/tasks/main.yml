@@ -1,0 +1,42 @@
+---
+# tasks file for windows
+- name: Install windows apps
+  win_chocolatey:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - firefox
+    - steam
+    - bitwarden
+    - zoom
+    - qbittorrent
+    - postman
+    - 7zip
+    - discord
+    - dropbox
+    - git
+    - golang
+    - mailspring
+    - nodejs
+    - notepadplusplus
+    - plexmediaserver
+    - python3
+    - slack
+    - spotify
+    - vlc
+    - vscode
+    - winscp
+    # - wox
+    # - autohotkey
+    - chromium
+    # - rambox
+    - microsoft-windows-terminal
+    - zeal
+    - powertoys
+    - deno
+    # - Minikube
+    # - kubernetes-cli
+    # - docker-desktop
+    - androidstudio
+  tags:
+    - windows

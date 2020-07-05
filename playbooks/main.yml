@@ -1,5 +1,5 @@
 --- # Main playbook
-- hosts: localhost
+- hosts: windows
   gather_facts: yes
   connection: local
   roles:
@@ -9,3 +9,4 @@
     - gaming
     - snaps
     - flatpaks
+    - windows

@@ -34,6 +34,7 @@
     - zeal
     - powertoys
     - deno
+    - prometheus-wmi-exporter.install
     # - Minikube
     # - kubernetes-cli
     # - docker-desktop

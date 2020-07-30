@@ -1,12 +1,18 @@
 --- # Main playbook
-- hosts: windows
+- hosts: localhost 
   gather_facts: yes
   connection: local
   roles:
-    - aur
-    - base
-    - python
-    - gaming
-    - snaps
-    - flatpaks
-    - windows
+      #- base
+      #- python
+      #- snaps
+    - shell
+  tasks:
+      #- include_role:
+      #  name : aur
+      #when: "ansible_facts['distribution'] == 'Archlinux'"
+  #  - gaming
+  #  - flatpaks
+    - include_role:
+        name: windows 
+      when: "ansible_facts['os_family'] == 'wndows'"

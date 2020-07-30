@@ -1,5 +1,3 @@
-- name: load vars
-  include_vars: apps.yml
 - name: Install applications for Ubuntu
   become: yes
   become_method: sudo
@@ -8,7 +6,10 @@
     state: present
   loop:
     - "{{ utilities }}"
-  when: ansible_facts['distribution'] == "Ubuntu"
+    - "{{ apps }}"
+  when: "ansible_facts['distribution'] == 'Ubuntu'"
+  tags:
+    - base-debian
 - name: Install applications for Arch-Manjaro
   become: yes
   become_method: sudo
@@ -17,4 +18,7 @@
     state: present
   loop:
     - "{{ utilities }}"
-  when: ansible_facts['distribution'] == "Manjaro" or ansible_facts['distribution'] == "ArchLinux"
+    - "{{ apps }}"
+  when: "ansible_facts['distribution'] == 'Archlinux'"
+  tags:
+    - base-arch

@@ -5,7 +5,7 @@ set showtabline=0
 set clipboard+=unnamedplus
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 "call vundle#begin('~/some/path/here')
@@ -33,7 +33,6 @@ Plugin 'junegunn/fzf'                       " fuzzyfind
 "Plugin 'neoclide/coc.nvim', {'branch': 'release'} " Code Completion
 Plugin 'tmhedberg/SimpylFold'               " Fold Code
 Plugin 'vim-scripts/indentpython.vim'       " python indent
-Plugin 'Valloric/YouCompleteMe'             " Code completion
 Plugin 'vim-syntastic/syntastic'            " Syntax Highlight
 Plugin 'nvie/vim-flake8'                    " Flake 8 for formatting
 

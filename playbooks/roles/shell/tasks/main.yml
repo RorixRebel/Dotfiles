@@ -9,6 +9,10 @@
       repo: https://github.com/romkatv/powerlevel10k.git
       dest: $HOME/.oh-my-zsh/custom/themes/powerlevel10k
       depth: 1
+- name: Create vim folder
+  file:
+       path: /home/$USER/.config/nvim
+       state: directory
 - name: Copy nvim files
   copy:
       src: /home/$USER/dotfiles/nvim/init.vim

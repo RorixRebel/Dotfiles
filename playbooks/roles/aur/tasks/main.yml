@@ -16,12 +16,11 @@
        - postman-bin
        - vscodium-bin
        - dropbox
+       - notion-app
        - aws-cli
        - otf-fira-code-git
        - ttf-jetbrains-mono
        - catt
        - spicetify
-       - zeal
-       - zoom
    tags:
      - arch-aur

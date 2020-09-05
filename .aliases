@@ -2,7 +2,7 @@
 
 # Customization
 alias vim="nvim"
-alias cat="bat"
+alias cat="batcat"
 alias du="ncdu"
 alias ping="prettyping"
 

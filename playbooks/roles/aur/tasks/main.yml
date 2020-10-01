@@ -22,5 +22,6 @@
        - ttf-jetbrains-mono
        - catt
        - spicetify
+       - duf
    tags:
      - arch-aur

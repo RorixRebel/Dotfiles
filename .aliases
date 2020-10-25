@@ -2,8 +2,11 @@
 
 # Customization
 alias vim="nvim"
+
 # cat
-if ['/bin/bat']; then
+if [ -f "/bin/bat" ]; then
+    alias cat="bat"
+elif [ -f "/usr/bin/bat" ]; then
     alias cat="bat"
 else
     alias cat="batcat"

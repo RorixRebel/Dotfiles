@@ -23,5 +23,6 @@
        - catt
        - spicetify
        - github-cli
+       - duf
    tags:
      - arch-aur

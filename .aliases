@@ -2,7 +2,16 @@
 
 # Customization
 alias vim="nvim"
-alias cat="batcat"
+
+# cat
+if [ -f "/bin/bat" ]; then
+    alias cat="bat"
+elif [ -f "/usr/bin/bat" ]; then
+    alias cat="bat"
+else
+    alias cat="batcat"
+fi
+
 alias du="ncdu"
 alias ping="prettyping"
 
@@ -18,4 +27,3 @@ alias ll="ls -lrta"
 # SSH
 alias sshserver="ssh admin@server.local.net"
 alias sshpi="ssh pi@pi.local.net"
-alias sshkali="ssh rorix@192.168.122.15"

@@ -6,31 +6,30 @@
     state: present
   loop:
     - 7zip
-    - Minikube
     - androidstudio
-    - bitwarden
     - chromium
     - deno
     - discord
-    - docker-desktop
-    - dropbox
-    - firefox
+    - gh
     - git
     - golang
+    - InkScape
     - kubernetes-cli
+    - kubernetes-helm
     - mailspring
     - microsoft-windows-terminal
+    - Minikube
     - nodejs
     - notepadplusplus
     - openssh
     - plexmediaserver
     - postman
     - powertoys
-    - prometheus-wmi-exporter.install
+    - prometheus-wmi-exporterr
     - python3
     - qbittorrent
-    - redis-desktop-manager
     - robo3t
+    - rust
     - slack
     - spotify
     - steam
@@ -39,7 +38,5 @@
     - winscp
     - zeal
     - zoom
-    - gh
-    - inkscape
   tags:
     - windows

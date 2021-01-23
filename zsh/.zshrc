@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 export EDITOR='nvim'
 source ~/dotfiles/.aliases
+eval $(thefuck --alias)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

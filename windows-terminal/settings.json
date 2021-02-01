@@ -62,14 +62,6 @@
         "icon": "G:\\wsl\\ubuntu.png",
         "startingDirectory": "//wsl$/Ubuntu-20.04/home/rorix"
       },
-      {
-        "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
-        "hidden": false,
-        "name": "kali-linux",
-        "source": "Windows.Terminal.Wsl",
-        "icon": "G:\\wsl\\kali.jpg",
-        "startingDirectory": "//wsl$/kali-linux/home/kali"
-      }
     ]
   },
 

@@ -7,13 +7,21 @@
   loop:
     - 7zip
     - androidstudio
+<<<<<<< HEAD
     - chocolatey
+=======
+>>>>>>> 656b2df1023c15ed50742d42902533f74868939d
     - chromium
     - deno
     - discord
     - gh
+<<<<<<< HEAD
     - gimp
     - git
+=======
+    - git
+    - gimp
+>>>>>>> 656b2df1023c15ed50742d42902533f74868939d
     - golang
     - InkScape
     - kubernetes-cli
@@ -27,12 +35,23 @@
     - plexmediaserver
     - postman
     - powertoys
+<<<<<<< HEAD
     - Prometheus-wmi-exporter
+=======
+    - prometheus-wmi-exporterr
+>>>>>>> 656b2df1023c15ed50742d42902533f74868939d
     - python3
     - qbittorrent
     - robo3t
     - rust
     - slack
+<<<<<<< HEAD
+=======
+    - spotify
+    - steam
+    - vlc
+    - vscode
+>>>>>>> 656b2df1023c15ed50742d42902533f74868939d
     - winscp
     - zeal
     - zoom

@@ -23,6 +23,7 @@ alias projects="cd ~/Projects/"
 alias updateos="sudo pacman -Syu"
 alias updateaur="yay -Syu"
 alias ll="ls -lrta"
+alias fk="fuck"
 
 # SSH
 alias sshserver="ssh admin@server.local.net"

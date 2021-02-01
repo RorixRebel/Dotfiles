@@ -1,4 +1,4 @@
-i3: 
+i3:
   - rofi
   - playerctl
   - pavucontrol
@@ -42,7 +42,8 @@ utilities:
   - neovim
   - zsh
   - jq
-  - docker 
+  - docker
   - fzf
   - httpie
   - neofetch
+  - github-cli

@@ -10,6 +10,7 @@
     - chromium
     - deno
     - discord
+    - docker-desktop
     - gh
     - git
     - gimp
@@ -26,7 +27,7 @@
     - plexmediaserver
     - postman
     - powertoys
-    - prometheus-wmi-exporterr
+    - prometheus-wmi-exporter
     - python3
     - qbittorrent
     - robo3t

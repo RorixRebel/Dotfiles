@@ -76,7 +76,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws django docker httpie node npm pip systemd ansible kubectl vi-mode)
+plugins=(git aws django docker httpie node npm pip systemd ansible kubectl vi-mode tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,6 +106,21 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='nvim'
 source ~/dotfiles/.aliases
 eval $(thefuck --alias)
+alias python=python3
+alias pip=pip3
+export ZSH_TMUX_AUTOSTART='true'
+
+# pip zsh completion start
+function _pip_completion {
+  local words cword
+  read -Ac words
+  read -cn cword
+  reply=( $( COMP_WORDS="$words[*]" \
+             COMP_CWORD=$(( cword-1 )) \
+             PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
+}
+compctl -K _pip_completion pip3
+# pip zsh completion end
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

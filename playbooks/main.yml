@@ -10,7 +10,7 @@
     - flatpaks
   tasks:
     - include_role:
-        name : aur
+        name : base
       when: "ansible_facts['distribution'] == 'Archlinux'"
     - include_role:
         name: windows 

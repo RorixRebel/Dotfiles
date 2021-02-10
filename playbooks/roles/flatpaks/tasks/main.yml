@@ -1,11 +1,11 @@
 ---
 # tasks file for flatpaks
-- name: Install flatpaks
-  block:
-    - name: Install Planner
-      flatpak:
-        name: com.github.alainm23.planner
-        state: present
-        method: user
-  tags:
-    - flatpaks
+# - name: Install flatpaks
+#   block:
+#     - name: Install Planner
+#       flatpak:
+#         name: com.github.alainm23.planner
+#         state: present
+#         method: user
+#   tags:
+#     - flatpaks

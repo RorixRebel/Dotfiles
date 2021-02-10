@@ -22,7 +22,6 @@ apps:
   - speedtest-cli
   - smartmontools
   - wavemon
-  - latte-dock
   - rmlint
   - mlocate
   - cmatrix
@@ -47,3 +46,4 @@ utilities:
   - httpie
   - neofetch
   - github-cli
+  - tmux

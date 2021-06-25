@@ -23,7 +23,6 @@
     - Minikube
     - nodejs
     - openssh
-    - plexmediaserver
     - postman
     - powertoys
     - prometheus-wmi-exporter
@@ -39,5 +38,6 @@
     - winscp
     - zeal
     - zoom
+    - alacritty
   tags:
     - windows
